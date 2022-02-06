@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('frontend.index');
 });
 
 Auth::routes(['register' => false,'login' => false]);
@@ -71,6 +71,27 @@ Route::group(['namespace' => 'Admin','prefix'=>'admin','middleware' => ['auth','
     //-------------profile controller end --------
 
 
+    //Main content controller-////
+
+    Route::group(['prefix' => 'main','as'=>'main.'],function(){
+        Route::get('/index','MainContentController@index')->name('index');
+        Route::post('/index','MainContentController@update')->name('update');
+       
+    });
+
+
+      //About me controller-////
+
+    Route::group(['prefix' => 'aboutme','as'=>'aboutme.'],function(){
+        Route::get('/index','MainContentController@index')->name('index');
+       
+    });
+
+
+
+});
+Route::get('/about', function () {
+    return view('admin.contact.contact');
 });
 
 

@@ -126,7 +126,69 @@
                                 </li>
                                 @endif
                             @endif
+                            
 
+
+
+                            <li>
+                                <a href="{{ route('admin.main.index') }}">
+                                    <i data-feather="shopping-cart"></i>
+                                    <span data-key="t-ecommerce">Main</span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="javascript: void(0);" class="has-arrow">
+                                    <i data-feather="shopping-cart"></i>
+                                    <span data-key="t-ecommerce">About</span>
+                                </a>
+                                <ul class="sub-menu" aria-expanded="false">
+                                    <li><a href="About me" key="t-products"><i class="fas fa-users"></i> About me</a></li>
+                                    <li><a href="#" data-key="t-product-detail"><i class="fas fa-users"></i> Services</a></li>
+                                    <li><a href="#" data-key="t-product-detail"><i class="fas fa-users"></i> Interests</a></li>
+                                    <li><a href="#" data-key="t-product-detail"><i class="fas fa-users"></i> Programming</a></li>
+                                    <li><a href="#" data-key="t-product-detail"><i class="fas fa-users"></i> Language</a></li>
+                                    <li><a href="#" data-key="t-product-detail"><i class="fas fa-users"></i> Education</a></li>
+                                    <li><a href="#" data-key="t-product-detail"><i class="fas fa-users"></i> Experience</a></li>
+                                    <li><a href="#" data-key="t-product-detail"><i class="fas fa-users"></i> Partners</a></li>
+                                    <li><a href="#" data-key="t-product-detail"><i class="fas fa-users"></i> Testimonials</a></li>
+                                </ul>
+                            </li>
+
+
+                            
+                            <li>
+                                <a href="javascript: void(0);" class="has-arrow">
+                                    <i data-feather="shopping-cart"></i>
+                                    <span data-key="t-ecommerce">Portfolio</span>
+                                </a>
+                                <ul class="sub-menu" aria-expanded="false">
+                                    <li><a href="About me" key="t-products"><i class="fas fa-users"></i> Add Category </a></li>
+                                    <li><a href="#" data-key="t-product-detail"><i class="fas fa-users"></i> New Portfolio </a></li>
+                                
+                                </ul>
+                            </li>
+
+
+                            <li>
+                                <a href="javascript: void(0);" class="has-arrow">
+                                    <i data-feather="shopping-cart"></i>
+                                    <span data-key="t-ecommerce">News</span>
+                                </a>
+                                <ul class="sub-menu" aria-expanded="false">
+                                    <li><a href="About me" key="t-products"><i class="fas fa-users"></i> Add Category </a></li>
+                                    <li><a href="#" data-key="t-product-detail"><i class="fas fa-users"></i> Add News </a></li>
+                                
+                                </ul>
+                            </li>
+
+                            <li>
+                                <a href="javascript: void(0);">
+                                    <i data-feather="shopping-cart"></i>
+                                    <span data-key="t-ecommerce">Contact</span>
+                                </a>
+                            </li>
+                            
 
                             {{-- <li>
                                 <a href="{{ route('admin.user.index') }}">
