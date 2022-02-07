@@ -39,6 +39,9 @@
                                     <div class="mb-3">
                                         <label class="form-label" for="formrow-firstname-input">Title</label>
                                         <input type="text" class="form-control" id="formrow-firstname-input" name="title" value="{{$main->title}}">
+                                        @error('title')
+                                         <span class="text text-danger">{{$message}}</span>
+                                         @enderror
                                     </div>
                                    </div>
                                </div>
@@ -46,19 +49,28 @@
                                    <div class="col-4">
                                     <div class="mb-3">
                                         <label class="form-label" for="formrow-email-input">Sub title 1</label>
-                                        <input type="text" class="form-control" id="formrow-email-input" name="sub_title1" value="{{$main->sub_title1}}">
+                                        <input type="text"  class="form-control" id="formrow-email-input" name="sub_title1" value="{{$main->sub_title1}}">
+                                        @error('sub_title1')
+                                        <span class="text text-danger">{{$message}}</span>
+                                        @enderror
                                     </div>
                                    </div>
                                    <div class="col-4">
                                     <div class="mb-3">
                                         <label class="form-label" for="formrow-email-input">Sub title 1</label>
                                         <input type="text" class="form-control" id="formrow-email-input" name="sub_title2" value="{{$main->sub_title2}}">
+                                        @error('sub_title2')
+                                        <span class="text text-danger">{{$message}}</span>
+                                        @enderror
                                     </div>
                                    </div>
                                    <div class="col-4">
                                     <div class="mb-3">
                                         <label class="form-label" for="formrow-email-input">Sub title 3</label>
                                         <input type="text" class="form-control" id="formrow-email-input" name="sub_title3" value="{{$main->sub_title3}}">
+                                        @error('sub_title3')
+                                        <span class="text text-danger">{{$message}}</span>
+                                        @enderror
                                     </div>
                                    </div>
                                </div>

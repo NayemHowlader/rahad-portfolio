@@ -11,8 +11,8 @@
 
         <!-- plugin css -->
         <link href="{{ asset('admin_assets') }}/libs/admin-resources/jquery.vectormap/jquery-jvectormap-1.2.2.css" rel="stylesheet" type="text/css" />
-
-       
+{{-- summernote --}}
+        <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
 
     <!-- DataTables -->
     <link href="{{ asset('admin_assets') }}/libs/datatables.net-bs4/css/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css" />
@@ -137,25 +137,59 @@
                                 </a>
                             </li>
 
+
                             <li>
                                 <a href="javascript: void(0);" class="has-arrow">
-                                    <i data-feather="shopping-cart"></i>
-                                    <span data-key="t-ecommerce">About</span>
+                                    <i data-feather="share-2"></i>
+                                    <span data-key="t-multi-level">About</span>
                                 </a>
                                 <ul class="sub-menu" aria-expanded="false">
-                                    <li><a href="About me" key="t-products"><i class="fas fa-users"></i> About me</a></li>
-                                    <li><a href="#" data-key="t-product-detail"><i class="fas fa-users"></i> Services</a></li>
-                                    <li><a href="#" data-key="t-product-detail"><i class="fas fa-users"></i> Interests</a></li>
-                                    <li><a href="#" data-key="t-product-detail"><i class="fas fa-users"></i> Programming</a></li>
-                                    <li><a href="#" data-key="t-product-detail"><i class="fas fa-users"></i> Language</a></li>
-                                    <li><a href="#" data-key="t-product-detail"><i class="fas fa-users"></i> Education</a></li>
-                                    <li><a href="#" data-key="t-product-detail"><i class="fas fa-users"></i> Experience</a></li>
-                                    <li><a href="#" data-key="t-product-detail"><i class="fas fa-users"></i> Partners</a></li>
-                                    <li><a href="#" data-key="t-product-detail"><i class="fas fa-users"></i> Testimonials</a></li>
+
+
+                                    <li><a href="{{ route('admin.about.index') }}" data-key="t-level-1-1">About me</a></li>
+                                    
+
+                                    <li>
+                                        <a href="javascript: void(0);"data-key="t-level-1-2">Interests</a>
+                                    </li>
+
+                                    <li>
+                                        <a href="javascript: void(0);" data-key="t-level-1-2">Programming</a> 
+                                    </li>
+
+                                    <li>
+                                        <a href="javascript: void(0);" data-key="t-level-1-2">Language</a> 
+                                    </li>
+                                    <li>
+                                        <a href="javascript: void(0);" data-key="t-level-1-2">Education</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript: void(0);" data-key="t-level-1-2">Experience</a>
+                                    </li>
                                 </ul>
                             </li>
 
+                            
+                           <li>
+                            <a href="javascript: void(0);">
+                                <i data-feather="share-2"></i>
+                                <span data-key="t-multi-level">Services</span>
+                            </a>
+                           </li>
 
+                           <li>
+                            <a href="javascript: void(0);">
+                                <i data-feather="share-2"></i>
+                                <span data-key="t-multi-level">Partners</span>
+                            </a>
+                           </li>
+
+                           <li>
+                            <a href="javascript: void(0);">
+                                <i data-feather="share-2"></i>
+                                <span data-key="t-multi-level">Testimonials</span>
+                            </a>
+                           </li>
                             
                             <li>
                                 <a href="javascript: void(0);" class="has-arrow">
@@ -163,8 +197,8 @@
                                     <span data-key="t-ecommerce">Portfolio</span>
                                 </a>
                                 <ul class="sub-menu" aria-expanded="false">
-                                    <li><a href="About me" key="t-products"><i class="fas fa-users"></i> Add Category </a></li>
-                                    <li><a href="#" data-key="t-product-detail"><i class="fas fa-users"></i> New Portfolio </a></li>
+                                    <li><a href="{{ route('admin.portfolio.category.index') }}" key="t-products"><i class="fas fa-users"></i>Category </a></li>
+                                    <li><a href="{{ route('admin.portfolio.index') }}" data-key="t-product-detail"><i class="fas fa-users"></i> All Portfolio </a></li>
                                 
                                 </ul>
                             </li>
@@ -409,6 +443,8 @@
 
         
         <script src="{{asset('admin_assets')}}/js/sweetalert/sweetalert.min.js"></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
         <script>
             $(document).on("click", "#delete", function(e){
                 e.preventDefault();
@@ -431,7 +467,14 @@
 
                 });
             });
+
         </script>
+ <script>
+    $(document).ready(function() {
+        $('#summernote').summernote();
+    });
+  </script
+
         <!-- Datatable init js -->
         <script src="{{asset('admin_assets')}}/js/pages/datatables.init.js"></script>
 

@@ -39,6 +39,18 @@
                                         <input type="text" class="form-control" id="formrow-firstname-input" name="title" value="">
                                     </div>
                                    </div>
+
+                                   <div class="form-group mb-3">
+                                    <label class="form-label">Status</label>
+                                    <select name="status" id="" class="form-control">
+                                        <option value>---Select Status---</option>
+                                        <option  value="Active">Active</option>
+                                        <option  value="Deactive">Deactive</option>
+                                    </select>
+                                @error('status')
+                                    <span class="text text-danger">{{$message}}</span>
+                                @enderror
+                                 </div>
                                </div>
                                                  
                                     <button type="submit" class="btn btn-primary w-mdm mt-4">Submit</button>

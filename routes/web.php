@@ -14,9 +14,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('frontend.index');
-});
+// Route::get('/', function () {
+//     return view('frontend.index');
+// });
+
+Route::get('/','Frontend\MainPagesController@index')->name('home');
 
 Auth::routes(['register' => false,'login' => false]);
 
@@ -75,24 +77,49 @@ Route::group(['namespace' => 'Admin','prefix'=>'admin','middleware' => ['auth','
 
     Route::group(['prefix' => 'main','as'=>'main.'],function(){
         Route::get('/index','MainContentController@index')->name('index');
-        Route::post('/index','MainContentController@update')->name('update');
+        Route::post('/update','MainContentController@update')->name('update');
        
     });
 
 
       //About me controller-////
 
-    Route::group(['prefix' => 'aboutme','as'=>'aboutme.'],function(){
-        Route::get('/index','MainContentController@index')->name('index');
+    Route::group(['prefix' => 'about','as'=>'about.'],function(){
+        Route::get('/index','AboutMeController@index')->name('index');
+        Route::post('/update/{id}','AboutMeController@update')->name('update');
+       
+    });
+
+
+    //Portfoliocategory Controller
+
+    Route::group(['prefix' => 'portfolio','as'=>'portfolio.'],function(){
+        Route::get('/category/index','PortfolioCategoryController@index')->name('category.index');
+        Route::get('/category/create','PortfolioCategoryController@create')->name('category.create');
+        Route::post('/category/store','PortfolioCategoryController@store')->name('category.store');
+        Route::get('/category/edit/{id}','PortfolioCategoryController@edit')->name('category.edit');
+        Route::post('/category/update/{id}','PortfolioCategoryController@update')->name('category.update');
+        Route::get('category/delete/{id}','PortfolioCategoryController@delete')->name('category.delete');
+       
+       
+    });
+
+
+    Route::group(['prefix' => 'portfolio','as'=>'portfolio.'],function(){
+        Route::get('/index','PortfolioController@index')->name('index');
+        Route::get('/create','PortfolioController@create')->name('create');
+        Route::post('/store','PortfolioController@store')->name('store');
+        Route::get('/edit/{id}','PortfolioController@edit')->name('edit');
+        Route::post('/update/{id}','PortfolioController@update')->name('update');
+        
+        
        
     });
 
 
 
 });
-Route::get('/about', function () {
-    return view('admin.contact.contact');
-});
+
 
 
 

@@ -26,61 +26,67 @@
                     <div class="card">
                         <div class="card-header text-center bg-primary text-white">
                             <div class="card-title">
-                                Add Portfolio
+                                 Portfolio Edit
                             </div>
                            
                         </div>
                         <div class="card-body">
-                           <form>
+                           <form method="post" action="{{ route('admin.portfolio.update',$portfolio->id) }}"  }}>
+                            @csrf
                                <div class="row">
                                    <div class="col-12">
                                     <div class="mb-3">
-                                        
-                                        <select class="form-select" aria-label="Default select example">
-                                            <option selected>Select Category</option>
-                                            <option value="1">Category One</option>
-                                            <option value="2">Category Two</option>
-                                            <option value="3">Category Three</option>
+                                        <label for="">Select Category</label>
+                                        <select class="form-select" aria-label="Default select example" name="category_name">
+                         
+
+                                            
+                                            @foreach ($categories as $category )
+                                            @if($category->status == 'Active')
+                                            <option  value="{{ $category->category }}">{{ $category->category }}</option>
+                                            @endif
+                                            @endforeach 
+
+                                            
+                                            <option selected value="{{ $portfolio->category_name }}">{{ $portfolio->category_name }}</option> 
+                                         
+
                                           </select>
                                     </div>
 
                                     <div class="mb-3">
                                         
-                                        <label class="form-label" for="formrow-firstname-input">Project Name </label>
-                                        <input type="text" class="form-control" id="formrow-firstname-input" name="title" value="">
+                                        <label class="form-label" for="formrow-firstname-input">Portfolio Title </label>
+                                        <input type="text" class="form-control" id="formrow-firstname-input" name="title" value="{{ $portfolio->title }}">
                                     </div>
 
-                                    <div class="mb-3">
-                                        
-                                        <label class="form-label" for="formrow-firstname-input">Client Name </label>
-                                        <input type="text" class="form-control" id="formrow-firstname-input" name="title" value="">
-                                    </div>
+                                   
 
                                     <div class="mb-3">
                                         
                                         <div class="form-group">
-                                            <label for="exampleFormControlFile1">Project Banner</label>
+                                            <label for="exampleFormControlFile1">Portfolio Image</label>
+                                            <img src="{{asset('photo/portfolio')}}/{{ $portfolio->image }}" alt="img" style="height: 40px" name="image">
                                             <input type="file" class="form-control-file" id="exampleFormControlFile1">
                                           </div> 
                                     </div>
 
-                                    <div class="mb-3">
+                                   
 
-                                        <label for="basic-url">Project Link</label>
-                                            <div class="input-group mb-3">
-                                            <div class="input-group-prepend">
-                                                <span class="input-group-text" id="basic-addon3">https://example.com/users/</span>
-                                            </div>
-                                            <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
-                                            </div>
+                                    <div class="mb-3">
+                                        
+                                        <label class="form-label" for="formrow-firstname-input">Portfolio Details</label>
+                                     
+
+                                        <textarea id="summernote" name="details">{{ $portfolio->details }}</textarea>
                                     </div>
 
                                     <div class="mb-3">
                                         
-                                        <label class="form-label" for="formrow-firstname-input">Project Details</label>
-                                        
-                                        
-                                            <div id="ckeditor-classic"></div>
+                                        <select class="form-select" aria-label="Default select example" name="status">
+                                        <option @if ($portfolio->status == 'Active') selected @endif value="Active">Active</option>
+                                        <option @if ($portfolio->status == 'Deactive') selected @endif value="Deactive">Deactive</option>
+                                          </select>
                                     </div>
 
                                    

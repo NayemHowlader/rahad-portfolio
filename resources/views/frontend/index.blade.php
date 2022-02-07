@@ -12,15 +12,15 @@
         <div class="cavani_tm_section animated" id="home">
             <div class="cavani_tm_home">
                 <div class="content">
-                    <h3 class="name">David Parker</h3>
+                    <h3 class="name">{{$main->title}}</h3>
                     <span class="line"></span>
                     <h3 class="job">
                         <span class="cd-headline zoom"> <!-- ANIMATE TEXT VALUES: zoom, rotate-1, letters type, letters rotate-2, loading-bar, slide, clip, letters rotate-3, letters scale, push,  -->
                             <span class="blc">Creative</span>
                             <span class="cd-words-wrapper">
-                              <b class="is-visible">Designer</b>
-                              <b>Developer</b>
-                              <b>Freelancer</b>
+                              <b class="is-visible">{{$main->sub_title1}}</b>
+                              <b>{{$main->sub_title2}}</b>
+                              <b>{{$main->sub_title3}}</b>
                             </span>
                         </span>
                     </h3>
@@ -42,17 +42,16 @@
                         </div>
                         <div class="wrapper">
                             <div class="left">
-                                <p>Hello there! My name is <strong>David Parker.</strong> I am a graphic designer, and I'm very passionate and dedicated to my work.</p>
-                                <p>With 20 years experience as a professional a graphic designer, I have acquired the skills and knowledge necessary to make your project a success.</p>
+                                <p>{{$aboutme->description}}</p>
                             </div>
                             <div class="right">
                                 <ul>
-                                    <li><span class="first">Name:</span><span class="second">David Parker</span></li>
-                                    <li><span class="first">Address:</span><span class="second">Ave Street, New York, USA</span></li>
-                                    <li><span class="first">Study:</span><span class="second">Univercity of Oxford</span></li>
-                                    <li><span class="first">Degree:</span><span class="second">Master of Science</span></li>
-                                    <li><span class="first">Mail:</span><span class="second"><a href="#">hello@cavani.com</a></span></li>
-                                    <li><span class="first">Phone:</span><span class="second">+77 022 444 05 05</span></li>
+                                    <li><span class="first">Name:</span><span class="second">{{$aboutme->name}}</span></li>
+                                    <li><span class="first">Address:</span><span class="second">{{$aboutme->address}}</span></li>
+                                    <li><span class="first">Study:</span><span class="second">{{$aboutme->study}}</span></li>
+                                    <li><span class="first">Degree:</span><span class="second">{{$aboutme->degree}}</span></li>
+                                    <li><span class="first">Mail:</span><span class="second"><a href="#">{{$aboutme->mail}}</a></span></li>
+                                    <li><span class="first">Phone:</span><span class="second">{{$aboutme->phone}}</span></li>
                                 </ul>
                             </div>
                         </div>
