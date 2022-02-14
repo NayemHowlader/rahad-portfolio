@@ -52,7 +52,7 @@
                                 <td>{{ $portfolio->category_name }}</td>     
                                 <td>{{ $portfolio->title }}</td>    
                                   
-                                <td>{{ $portfolio->details }}</td>
+                                <td>{{ Illuminate\Support\Str::limit($portfolio->details, 10) }}</td>
                                 <td><img src="{{asset('photo/portfolio')}}/{{ $portfolio->image }}" alt="img" style="height: 40px"></td>  
                                 <td>
                                     @if ( $portfolio->status == 'Active')
@@ -69,7 +69,7 @@
                                     <a type="submit" href="{{ route('admin.portfolio.edit',$portfolio->id) }}" class="btn btn-sm btn-success waves-effect waves-light">
                                         <i class="mdi mdi-pencil d-block font-size-16"></i>
                                     </a>
-                                    <a href="" id="delete" class="btn btn-sm btn-danger waves-effect waves-light">
+                                    <a href="{{ route('admin.portfolio.destroy',$portfolio->id) }}" id="delete" class="btn btn-sm btn-danger waves-effect waves-light">
                                         <i class="mdi mdi-trash-can d-block font-size-16"></i>
                                     </a>
                                 </td>

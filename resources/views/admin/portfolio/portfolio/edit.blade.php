@@ -31,7 +31,7 @@
                            
                         </div>
                         <div class="card-body">
-                           <form method="post" action="{{ route('admin.portfolio.update',$portfolio->id) }}"  }}>
+                           <form method="post" action="{{ route('admin.portfolio.update',$portfolio->id) }}"  enctype="multipart/form-data"}}>
                             @csrf
                                <div class="row">
                                    <div class="col-12">
@@ -62,13 +62,13 @@
 
                                    
 
-                                    <div class="mb-3">
-                                        
-                                        <div class="form-group">
-                                            <label for="exampleFormControlFile1">Portfolio Image</label>
-                                            <img src="{{asset('photo/portfolio')}}/{{ $portfolio->image }}" alt="img" style="height: 40px" name="image">
-                                            <input type="file" class="form-control-file" id="exampleFormControlFile1">
-                                          </div> 
+                                    <div class="form-group mb-3">
+                                        <label class="form-label">Portfolio Image</label>
+                                        <input type="file" name="image" class="form-control"/>
+                                 <img src="{{asset('photo/portfolio')}}/{{ $portfolio->image }}" alt="" style="width:100px;margin-top:20px">
+                                    @error('image')
+                                         <span class="text text-danger">{{$message}}</span>
+                                     @enderror
                                     </div>
 
                                    

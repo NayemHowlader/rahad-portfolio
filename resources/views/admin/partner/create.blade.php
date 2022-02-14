@@ -13,7 +13,8 @@
                     <div class="page-title-right">
                         <ol class="breadcrumb m-0">
                             <li class="breadcrumb-item"><a href="{{ route('admin.dashboard') }}">Dashboard</a></li>
-                            <li class="breadcrumb-item active">News</li>
+                            <li class="breadcrumb-item active">Partner</li>
+                            <li class="breadcrumb-item active">Create</li>
                         </ol>
                     </div>
                 </div>
@@ -26,19 +27,34 @@
                     <div class="card">
                         <div class="card-header text-center bg-primary text-white">
                             <div class="card-title">
-                                Add Category
+                                Add Partner
                             </div>
                            
                         </div>
                         <div class="card-body">
-                           <form>
+                           <form action="{{ route('admin.partner.store') }}"  method="post" enctype="multipart/form-data">
+                            @csrf
                                <div class="row">
                                    <div class="col-12">
-                                    <div class="mb-3">
-                                        
-                                        <label class="form-label" for="formrow-firstname-input">Category Name </label>
-                                        <input type="text" class="form-control" id="formrow-firstname-input" name="title" value="">
+                                    <div class="form-group mb-3">
+                                        <label class="form-label">Partner Logo</label>
+                                        <input type="file" name="image" class="form-control"/>
+                                      
                                     </div>
+
+                    
+
+                                    <div class="form-group mb-3">
+                                        <label class="form-label">Status</label>
+                                        <select name="status" id="" class="form-control">
+                                            <option value>---Select Status---</option>
+                                            <option  value="Active">Active</option>
+                                            <option  value="Deactive">Deactive</option>
+                                        </select>
+                                    @error('status')
+                                        <span class="text text-danger">{{$message}}</span>
+                                    @enderror
+                                     </div>
                                    
                                    </div>
                                </div>

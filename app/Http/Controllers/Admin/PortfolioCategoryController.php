@@ -16,7 +16,7 @@ class PortfolioCategoryController extends Controller
     public function index(){
 
         
-        $categories = PortfolioCategory::get();
+        $categories = PortfolioCategory::orderBy('id','desc')->get();
         return view('admin.portfolio.category.index',[
             'categories' => $categories
         ]);

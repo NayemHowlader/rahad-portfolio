@@ -22,48 +22,39 @@
         <!-- end page title -->
 
             <div class="row">
-                <div class="col-8 m-auto">
+                <div class="col-6 m-auto">
                     <div class="card">
                         <div class="card-header text-center bg-primary text-white">
                             <div class="card-title">
-                                Add News
+                                Add Category
                             </div>
                            
                         </div>
                         <div class="card-body">
-                           <form>
+                           <form action="{{ route('admin.news.category.store') }}"  method="post" enctype="multipart/form-data">
+                            @csrf
                                <div class="row">
                                    <div class="col-12">
                                     <div class="mb-3">
                                         
-                                        <select class="form-select" aria-label="Default select example">
-                                            <option selected>Select Category</option>
-                                            <option value="1">Category One</option>
-                                            <option value="2">Category Two</option>
-                                            <option value="3">Category Three</option>
-                                          </select>
+                                        <label class="form-label" for="formrow-firstname-input">Category Name </label>
+                                        <input type="text" class="form-control" id="formrow-firstname-input" name="category" value="">
+                                     @error('category')
+                                        <span class="text text-danger">{{$message}}</span>
+                                    @enderror
                                     </div>
 
-
-                                    <div class="mb-3">
-                                        <div class="form-group">
-                                            <label for="exampleFormControlFile1">Select Image</label>
-                                            <input type="file" class="form-control-file" id="exampleFormControlFile1">
-                                          </div> 
-                                       
-                                    </div>
-
-                                    <div class="mb-3">
-                                        <label class="form-label" for="formrow-firstname-input">News Title </label>
-                                        <input type="text" class="form-control" id="formrow-firstname-input" name="title" value="">
-                                    </div>
-
-                                    <div class="mb-3">
-                                        <label class="form-label" for="formrow-firstname-input">News Description</label>
-                                        
-                                        
-                                            <div id="ckeditor-classic"></div>
-                                    </div>
+                                    <div class="form-group mb-3">
+                                        <label class="form-label">Status</label>
+                                        <select name="status" id="" class="form-control">
+                                            <option value>---Select Status---</option>
+                                            <option  value="Active">Active</option>
+                                            <option  value="Deactive">Deactive</option>
+                                        </select>
+                                    @error('status')
+                                        <span class="text text-danger">{{$message}}</span>
+                                    @enderror
+                                     </div>
                                    
                                    </div>
                                </div>

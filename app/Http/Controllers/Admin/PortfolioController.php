@@ -36,7 +36,8 @@ class PortfolioController extends Controller
             'status' => 'required',
             
         ]);
-        // dd($request->all());
+
+      
       $portfolio =  Portfolio::create([
             'category_name' => $request->category_name,
             'title' => $request->title,
@@ -76,28 +77,24 @@ class PortfolioController extends Controller
     }
 
 
-    public function update(Request $request , $id){
-
-        $portfolio = Portfolio::where('id',$id)->first();
+    public function update(Request $request,$id){
 
         $request->validate([
-            'category_name' => 'required',
-            'title' => 'required',
-            'details' =>'required',
-            'status' =>'required'
-
+          'category_name' => 'required',
+           'title' => 'required',
+           'details' =>'required',
+            'status' => 'required',
         ]);
-        
-     $portfolio =   Portfolio::where('id',$id)->update([
+
+        Portfolio::where('id',$id)->update([
             'category_name' => $request->category_name,
              'title' =>   $request->title,
              'details' => $request->details,
              'status' =>  $request->status,
-             'edited_by' => Auth::user()->role,
+            'edited_by' => Auth::user()->role,
         ]);
-        
-
-
+      
+        $portfolio = Portfolio::where('id',$id)->first();
         if ($request->hasFile('image')) {
             //old photo delete if it is not default photo
             $old_photo_name = $portfolio->image;
@@ -107,18 +104,30 @@ class PortfolioController extends Controller
             }
             //photo update
             $image = $request->file('image');
-            $name = $portfolio->name.'_'.$portfolio->id.".".$image->getClientOriginalExtension();
+            $name = $request->id.".".$image->getClientOriginalExtension();
             $destination = public_path('photo/portfolio/');
             $image->move($destination,$name);
             Portfolio::where('id',$id)->update([
                 'image' => $name,
             ]);
+           
 
         }
-
-         return redirect()->route('admin.portfolio.index')->with('alert-success','Category update Successfully');
+         return redirect()->route('admin.portfolio.index')->with('alert-success','Portfolio update Successfully');
 
     }
+
+
+    public function destroy($id){
+        $portfolio = Portfolio::where('id',$id)->first();
+            // delete image
+            $oldImage = $portfolio->image;
+            $oldImageLocation = public_path('photo/portfolio/').$oldImage;
+            unlink($oldImageLocation);
+            $portfolio->delete();
+        return back()->with('alert-success','Portfolio Deleted Successfully');
+    }
+
 
 
 }

@@ -63,13 +63,15 @@
                                     <span>Services</span>
                                 </div>
                                 <div class="list">
+
+                                    @foreach ($services as $service )
+                                        
+                                  
                                     <ul>
-                                        <li><i class="icon-right-dir"></i>Web Development</li>
-                                        <li><i class="icon-right-dir"></i>Graphic Design</li>
-                                        <li><i class="icon-right-dir"></i>Landing Page</li>
-                                        <li><i class="icon-right-dir"></i>On-Page SEO</li>
-                                        <li><i class="icon-right-dir"></i>Web Hosting</li>
+                                <li><i class="icon-right-dir"></i>{{ $service->title }}</li>
+                                        
                                     </ul>
+                                    @endforeach
                                 </div>
                             </div>
                             <div class="interests">
@@ -77,13 +79,14 @@
                                     <span>Interests</span>
                                 </div>
                                 <div class="list">
+                                    @foreach ($interestes as $interest)
+                                        
+        
                                     <ul>
-                                        <li><i class="icon-right-dir"></i>Painting &amp; Drawing</li>
-                                        <li><i class="icon-right-dir"></i>Reading &amp; Writing</li>
-                                        <li><i class="icon-right-dir"></i>Music &amp; Cinema</li>
-                                        <li><i class="icon-right-dir"></i>Travel &amp; Picnik</li>
-                                        <li><i class="icon-right-dir"></i>Rain &amp; Snow</li>
+                                        <li><i class="icon-right-dir"></i>{{ $interest->title }}</li>
+                                        
                                     </ul>
+                                    @endforeach
                                 </div>
                             </div>
                         </div>
@@ -94,20 +97,18 @@
                                 <div class="cavani_tm_title">
                                     <span>Programming</span>
                                 </div>
+                                @foreach ($programmings as $programming)
+                                    
+                               
                                 <div class="cavani_progress">
-                                    <div class="progress_inner" data-value="95">
-                                        <span><span class="label">HTML &amp; CSS</span><span class="number">95%</span></span>
+                                    <div class="progress_inner" data-value="{{ $programming->level }}">
+                                        <span><span class="label">{{ $programming->title }}</span><span class="number">{{ $programming->level }}%</span></span>
                                         <div class="background"><div class="bar"><div class="bar_in"></div></div></div>
                                     </div>
-                                    <div class="progress_inner" data-value="80" >
-                                        <span><span class="label">JavaScript</span><span class="number">80%</span></span>
-                                        <div class="background"><div class="bar"><div class="bar_in"></div></div></div>
-                                    </div>
-                                    <div class="progress_inner" data-value="90">
-                                        <span><span class="label">WordPress</span><span class="number">90%</span></span>
-                                        <div class="background"><div class="bar"><div class="bar_in"></div></div></div>
-                                    </div>
+                    
                                 </div>
+
+                                @endforeach
                             </div>
                             <div class="language">
                                 <div class="cavani_tm_title">
@@ -115,24 +116,20 @@
                                 </div>
                                 <div class="circular_progress_bar">
                                     <ul>
+
+                                        @foreach ($languages as $languages)
+                                            
+                                        
                                         <li>
                                             <div class="list_inner">
-                                                <div class="myCircle" data-value="0.9"></div>
-                                                <div class="title"><span>English</span></div>
+                                                <div class="myCircle" data-value="{{ $languages->level }}"></div>
+                                                <div class="title"><span>{{ $languages->title }}</span></div>
                                             </div>
                                         </li>
-                                        <li>
-                                            <div class="list_inner">
-                                                <div class="myCircle" data-value="0.8"></div>
-                                                <div class="title"><span>Russian</span></div>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="list_inner">
-                                                <div class="myCircle" data-value="0.9"></div>
-                                                <div class="title"><span>Arabic</span></div>
-                                            </div>
-                                        </li>
+
+                                        @endforeach
+                                       
+                                      
                                     </ul>
                                 </div>
                             </div>
@@ -147,39 +144,23 @@
                                 <div class="list">
                                     <div class="univ">
                                         <ul>
+                                            @foreach ($educations as $education)
                                             <li>
+
+                                               
+                                                    
+                                                
                                                 <div class="list_inner">
                                                     <div class="time">
-                                                        <span>2014 - 2016</span>
+                                                        <span>{{ $education->year }}</span>
                                                     </div>
                                                     <div class="place">
-                                                        <h3>Oxford Univercity</h3>
-                                                        <span>Master Degree</span>
+                                                        <h3>{{ $education->institute }}</h3>
+                                                        <span>{{ $education->degree }}</span>
                                                     </div>
                                                 </div>
                                             </li>
-                                            <li>
-                                                <div class="list_inner">
-                                                    <div class="time">
-                                                        <span>2010 - 2014</span>
-                                                    </div>
-                                                    <div class="place">
-                                                        <h3>Texas Univercity</h3>
-                                                        <span>Bachelor Degree</span>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="list_inner">
-                                                    <div class="time">
-                                                        <span>2008 - 2010</span>
-                                                    </div>
-                                                    <div class="place">
-                                                        <h3>Simone College</h3>
-                                                        <span>Associate Degree</span>
-                                                    </div>
-                                                </div>
-                                            </li>
+                                            @endforeach
                                         </ul>
                                     </div>
                                 </div>
@@ -191,39 +172,24 @@
                                 <div class="list">
                                     <div class="univ">
                                         <ul>
+
+
+                                            @foreach ($experiences as $experience)
+                                                
+                                            
                                             <li>
                                                 <div class="list_inner">
                                                     <div class="time">
-                                                        <span>2018 - running</span>
+                                                        <span>{{ $experience->year }}</span>
                                                     </div>
                                                     <div class="place">
-                                                        <h3>Envato Elements</h3>
-                                                        <span>Exclusive Author</span>
+                                                        <h3>{{ $experience->institute }}</h3>
+                                                        <span>{{ $experience->position }}</span>
                                                     </div>
                                                 </div>
                                             </li>
-                                            <li>
-                                                <div class="list_inner">
-                                                    <div class="time">
-                                                        <span>2015 - 2018</span>
-                                                    </div>
-                                                    <div class="place">
-                                                        <h3>Avo Corporation</h3>
-                                                        <span>Content Manager</span>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="list_inner">
-                                                    <div class="time">
-                                                        <span>2012 - 2015</span>
-                                                    </div>
-                                                    <div class="place">
-                                                        <h3>FC Barcelona</h3>
-                                                        <span>Football Player</span>
-                                                    </div>
-                                                </div>
-                                            </li>
+                                            @endforeach
+                                         
                                         </ul>
                                     </div>
                                 </div>
@@ -236,54 +202,18 @@
                         </div>
                         <div class="list">
                             <ul>
+
+                                @foreach ($partners as $partner)
+                                    
+                               
                                 <li>
                                     <div class="list_inner">
-                                        <img src="{{ asset('frontend_assets') }}/img/partners/1.png" alt="" />
+                                        <img src="{{asset('photo/partner')}}/{{ $partner->image }}" alt="" />
                                         <a class="cavani_tm_full_link" a href="#"></a>
                                     </div>
                                 </li>
-                                <li>
-                                    <div class="list_inner">
-                                        <img src="{{ asset('frontend_assets') }}/img/partners/2.png" alt="" />
-                                        <a class="cavani_tm_full_link" a href="#"></a>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="list_inner">
-                                        <img src="{{ asset('frontend_assets') }}/img/partners/3.png" alt="" />
-                                        <a class="cavani_tm_full_link" a href="#"></a>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="list_inner">
-                                        <img src="{{ asset('frontend_assets') }}/img/partners/4.png" alt="" />
-                                        <a class="cavani_tm_full_link" a href="#"></a>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="list_inner">
-                                        <img src="{{ asset('frontend_assets') }}/img/partners/5.png" alt="" />
-                                        <a class="cavani_tm_full_link" a href="#"></a>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="list_inner">
-                                        <img src="{{ asset('frontend_assets') }}/img/partners/1.png" alt="" />
-                                        <a class="cavani_tm_full_link" a href="#"></a>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="list_inner">
-                                        <img src="{{ asset('frontend_assets') }}/img/partners/2.png" alt="" />
-                                        <a class="cavani_tm_full_link" a href="#"></a>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="list_inner">
-                                        <img src="{{ asset('frontend_assets') }}/img/partners/3.png" alt="" />
-                                        <a class="cavani_tm_full_link" a href="#"></a>
-                                    </div>
-                                </li>
+                               
+                                @endforeach
                             </ul>
                         </div>	
                     </div>
@@ -293,57 +223,29 @@
                         </div>
                         <div class="list">
                             <ul class="owl-carousel">
+
+                                @foreach ($testimonials as $testimonial)
+                                    
+                               
                                 <li>
                                     <div class="list_inner">
                                         <div class="text">
                                             <i class="icon-quote-left"></i>
-                                            <p>Beautiful minimalist design and great, fast response with support. Highly recommend. Thanks Marketify!</p>
+                                            <p>{{ $testimonial->details }}</p>
                                         </div>
                                         <div class="details">
                                             <div class="image">
                                                 <div class="main" data-img-url="img/testimonials/1.jpg"></div>
                                             </div>
                                             <div class="info">
-                                                <h3>Alexander Walker</h3>
-                                                <span>Graphic Designer</span>
+                                                <h3>{{ $testimonial->name }}</h3>
+                                                <span>{{ $testimonial->desination }}</span>
                                             </div>
                                         </div>
                                     </div>
                                 </li>
-                                <li>
-                                    <div class="list_inner">
-                                        <div class="text">
-                                            <i class="icon-quote-left"></i>
-                                            <p>These people really know what they are doing! Great customer support availability and supperb kindness.</p>
-                                        </div>
-                                        <div class="details">
-                                            <div class="image">
-                                                <div class="main" data-img-url="img/testimonials/2.jpg"></div>
-                                            </div>
-                                            <div class="info">
-                                                <h3>Armin Van Buuren</h3>
-                                                <span>Content Manager</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="list_inner">
-                                        <div class="text">
-                                            <i class="icon-quote-left"></i>
-                                            <p>I had a little problem and the support was just awesome to quickly solve the situation. And keep going on.</p>
-                                        </div>
-                                        <div class="details">
-                                            <div class="image">
-                                                <div class="main" data-img-url="img/testimonials/3.jpg"></div>
-                                            </div>
-                                            <div class="info">
-                                                <h3>Baraka Clinton</h3>
-                                                <span>English Teacher</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
+                         
+                                @endforeach
                             </ul>
                         </div>
                     </div>
@@ -359,97 +261,35 @@
                     <div class="cavani_tm_title">
                         <span>Creative Portfolio</span>
                     </div>
-                    <div class="portfolio_filter">
+                    <div class="portfolio_filter">              
                         <ul>
+        
                             <li><a href="#" class="current" data-filter="*">All</a></li>
-                            <li><a href="#" data-filter=".vimeo">Vimeo</a></li>
-                            <li><a href="#" data-filter=".youtube">Youtube</a></li>
-                            <li><a href="#" data-filter=".soundcloud">Soundcloud</a></li>
-                            <li><a href="#" data-filter=".image">Image</a></li>
-                            <li><a href="#" data-filter=".detail">Detail</a></li>
+                            @foreach ($portfolios as $portfolio)
+                            <li><a href="#" class="filter" data-filter=".{{ $portfolio->category_name }}">{{ $portfolio->category_name }}</a></li>
+                            @endforeach  
                         </ul>
+                       
                     </div>
                     <div class="portfolio_list">
                         <ul class="gallery_zoom">
-                            <li class="youtube">
+                         
+                          
+                          
+                            @foreach ($portfolios as $portfolio)
+                        
+                            <li class="{{ $portfolio->category_name }}">
+                               
+                                    
+                               
                                 <div class="list_inner">
                                     <div class="image">
-                                        <img src="{{ asset('frontend_assets') }}/img/thumbs/1-1.jpg" alt="" />
-                                        <div class="main" data-img-url="{{ asset('frontend_assets') }}/img/portfolio/1.jpg"></div>
-                                        <span class="icon"><i class="icon-youtube-play"></i></span>
-                                        <div class="details">
-                                            <h3>Ave Brook</h3>
-                                            <span>Youtube</span>
-                                        </div>
-                                        <a class="cavani_tm_full_link popup-youtube" href="https://www.youtube.com/watch?v=7e90gBu4pas"></a>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="vimeo">
-                                <div class="list_inner">
-                                    <div class="image">
-                                        <img src="{{ asset('frontend_assets') }}/img/thumbs/1-1.jpg" alt="" />
-                                        <div class="main" data-img-url="{{ asset('frontend_assets') }}/img/portfolio/2.jpg"></div>
-                                        <span class="icon"><i class="icon-vimeo-1"></i></span>
-                                        <div class="details">
-                                            <h3>Kelly Hookin</h3>
-                                            <span>Vimeo</span>
-                                        </div>
-                                        <a class="cavani_tm_full_link popup-vimeo" href="https://vimeo.com/337293658"></a>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="soundcloud">
-                                <div class="list_inner">
-                                    <div class="image">
-                                        <img src="{{ asset('frontend_assets') }}/img/thumbs/1-1.jpg" alt="" />
-                                        <div class="main" data-img-url="{{ asset('frontend_assets') }}/img/portfolio/3.jpg"></div>
-                                        <span class="icon"><i class="icon-soundcloud-1"></i></span>
-                                        <div class="details">
-                                            <h3>Ashley Flores</h3>
-                                            <span>Soundcloud</span>
-                                        </div>
-                                        <a class="cavani_tm_full_link soundcloude_link mfp-iframe audio" href="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/471954807&color=%23ff5500&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></a>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="image">
-                                <div class="list_inner">
-                                    <div class="image">
-                                        <img src="{{ asset('frontend_assets') }}/img/thumbs/1-1.jpg" alt="" />
-                                        <div class="main" data-img-url="{{ asset('frontend_assets') }}/img/portfolio/4.jpg"></div>
-                                        <span class="icon"><i class="icon-resize-full-alt"></i></span>
-                                        <div class="details">
-                                            <h3>Alla Gorova</h3>
-                                            <span>Image</span>
-                                        </div>
-                                        <a class="cavani_tm_full_link zoom" href="{{ asset('frontend_assets') }}/img/portfolio/4.jpg"></a>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="image">
-                                <div class="list_inner">
-                                    <div class="image">
-                                        <img src="{{ asset('frontend_assets') }}/img/thumbs/1-1.jpg" alt="" />
-                                        <div class="main" data-img-url="{{ asset('frontend_assets') }}/img/portfolio/5.jpg"></div>
-                                        <span class="icon"><i class="icon-resize-full-alt"></i></span>
-                                        <div class="details">
-                                            <h3>Fele Sweet</h3>
-                                            <span>Image</span>
-                                        </div>
-                                        <a class="cavani_tm_full_link zoom" href="{{ asset('frontend_assets') }}/img/portfolio/5.jpg"></a>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="detail">
-                                <div class="list_inner">
-                                    <div class="image">
-                                        <img src="{{ asset('frontend_assets') }}/img/thumbs/1-1.jpg" alt="" />
-                                        <div class="main" data-img-url="{{ asset('frontend_assets') }}/img/portfolio/6.jpg"></div>
+                                        <img src="{{asset('photo/portfolio')}}/{{ $portfolio->image }}" alt="" />
+                                        <div class="main" data-img-url="{{asset('photo/portfolio')}}/{{ $portfolio->image }}"></div>
                                         <span class="icon"><i class="icon-doc-text-inv"></i></span>
                                         <div class="details">
-                                            <h3>Alice Moon</h3>
-                                            <span>Detail</span>
+                                            <h3>{{ $portfolio->title }}</h3>
+                                            <span>{{ $portfolio->category_name }}</span>
                                         </div>
                                         <a class="cavani_tm_full_link portfolio_popup" href="#"></a>
                                     </div>
@@ -458,68 +298,20 @@
                                         <div class="popup_details">
                                             <div class="main_details">
                                                 <div class="textbox">
-                                                    <p>We live in a world where we need to move quickly and iterate on our ideas as flexibly as possible. Building mockups strikes the ideal balance ease of modification. Building mockups strikes the ideal balance ease of modification.</p>
-                                                    <p>Mockups are useful both for the creative phase of the project - for instance when you're trying to figure out your user flows or the proper visual hierarchy - and the production phase when they phase when they will represent the target product. Building mockups strikes the ideal balance ease of modification.</p>
+                                                    <p>{{ $portfolio->details }}</p>
+                                                    <img src="{{asset('photo/portfolio')}}/{{ $portfolio->image }}" alt="" />
+                                                   
                                                 </div>
-                                                <div class="detailbox">
-                                                    <ul>
-                                                        <li>
-                                                            <span class="first">Client</span>
-                                                            <span>Alvaro Morata</span>
-                                                        </li>
-                                                        <li>
-                                                            <span class="first">Category</span>
-                                                            <span><a href="#">Detail</a></span>
-                                                        </li>
-                                                        <li>
-                                                            <span class="first">Date</span>
-                                                            <span>March 07, 2021</span>
-                                                        </li>
-                                                        <li>
-                                                            <span class="first">Share</span>
-                                                            <ul class="share">
-                                                                <li><a href="#"><img class="svg" src="{{ asset('frontend_assets') }}/img/svg/social/facebook.svg" alt="" /></a></li>
-                                                                <li><a href="#"><img class="svg" src="{{ asset('frontend_assets') }}/img/svg/social/twitter.svg" alt="" /></a></li>
-                                                                <li><a href="#"><img class="svg" src="{{ asset('frontend_assets') }}/img/svg/social/instagram.svg" alt="" /></a>
-                                                                </li>
-                                                            </ul>
-                                                        </li>
-                                                    </ul>
-                                                </div>
+                                                
                                             </div>
-                                            <div class="additional_images">
-                                                <ul>
-                                                    <li>
-                                                        <div class="list_inner">
-                                                            <div class="my_image">
-                                                                <img src="{{ asset('frontend_assets') }}/img/thumbs/4-2.jpg" alt="" />
-                                                                <div class="main" data-img-url="{{ asset('frontend_assets') }}/img/portfolio/1.jpg"></div>
-                                                            </div>
-                                                        </div>
-                                                    </li>
-                                                    <li>
-                                                        <div class="list_inner">
-                                                            <div class="my_image">
-                                                                <img src="{{ asset('frontend_assets') }}/img/thumbs/4-2.jpg" alt="" />
-                                                                <div class="main" data-img-url="{{ asset('frontend_assets') }}/img/portfolio/2.jpg"></div>
-                                                            </div>
-                                                        </div>
-                                                    </li>
-                                                    <li>
-                                                        <div class="list_inner">
-                                                            <div class="my_image">
-                                                                <img src="{{ asset('frontend_assets') }}/img/thumbs/4-2.jpg" alt="" />
-                                                                <div class="main" data-img-url="{{ asset('frontend_assets') }}/img/portfolio/3.jpg"></div>
-                                                            </div>
-                                                        </div>
-                                                    </li>
-                                                </ul>
-                                            </div>
+                                        
                                         </div>
                                     </div>
                                     
                                 </div>
                             </li>
+
+                            @endforeach
                         </ul>
                     </div>
                 </div>
@@ -536,21 +328,29 @@
                     </div>
                     <div class="news_list">
                         <ul>
+
+
+
+                            @foreach ($newses as $news)
+                                
+                            
+
                             <li>
                                 <div class="list_inner">
                                     <div class="image">
-                                        <img src="{{ asset('frontend_assets') }}/img/thumbs/4-3.jpg" alt="" />
-                                        <div class="main" data-img-url="{{ asset('frontend_assets') }}/img/news/1.jpg"></div>
+                                        <img src="{{asset('photo/news')}}/{{ $news->image }}" alt="" />
+                                        <div class="main" data-img-url="{{asset('photo/news')}}/{{ $news->image }}"></div>
                                         <a class="cavani_tm_full_link" href="#"></a>
                                     </div>
                                     <div class="details">
                                         <div class="metabox">
                                             <div class="info">
-                                                <span class="category"><a href="#">Branding</a></span>
-                                                <span class="date">August 9, 2021</span>
+                                                <span class="category"><a href="#">{{ $news->category_name }}</a></span>
+                                                <span class="date">{{ $news->created_at->format('Y-m-d') }}</span>
                                             </div>
                                             <div class="title">
-                                                <h3><a href="#">Building brands through customer service</a></h3>
+                                                <h3><a href="#">{{ $news->title }}</a></h3>
+                            
                                             </div>
                                         </div>
                                     </div>
@@ -558,170 +358,17 @@
                                     <div class="news_hidden_details">
                                         <div class="news_popup_informations">
                                             <div class="text">
-                                                <p>Cavani is a leading web design agency with an award-winning design team that creates innovative, effective websites that capture your brand, improve your conversion rates, and maximize your revenue to help grow your business and achieve your goals.</p>
-                                                <p>In today’s digital world, your website is the first interaction consumers have with your business. That's why almost 95 percent of a user’s first impression relates to web design. It’s also why web design services can have an immense impact on your company’s bottom line.</p>
-                                                <p>That’s why more companies are not only reevaluating their website’s design but also partnering with Kura, the web design agency that’s driven more than $2.4 billion in revenue for its clients. With over 50 web design awards under our belt, we're confident we can design a custom website that drives sales for your unique business.</p>
+                                                <p>{{ $news->details }}</p>
+                                                <img src="{{asset('photo/news')}}/{{ $news->image }}" alt="" />
+                                        
                                             </div>
                                         </div>
                                     </div>
                                     
                                 </div>
                             </li>
-                            <li>
-                                <div class="list_inner">
-                                    <div class="image">
-                                        <img src="{{ asset('frontend_assets') }}/img/thumbs/4-3.jpg" alt="" />
-                                        <div class="main" data-img-url="{{ asset('frontend_assets') }}/img/news/2.jpg"></div>
-                                        <a class="cavani_tm_full_link" href="#"></a>
-                                    </div>
-                                    <div class="details">
-                                        <div class="metabox">
-                                            <div class="info">
-                                                <span class="category"><a href="#">Branding</a></span>
-                                                <span class="date">August 9, 2021</span>
-                                            </div>
-                                            <div class="title">
-                                                <h3><a href="#">Building brands through customer service</a></h3>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    
-                                    <div class="news_hidden_details">
-                                        <div class="news_popup_informations">
-                                            <div class="text">
-                                                <p>Cavani is a leading web design agency with an award-winning design team that creates innovative, effective websites that capture your brand, improve your conversion rates, and maximize your revenue to help grow your business and achieve your goals.</p>
-                                                <p>In today’s digital world, your website is the first interaction consumers have with your business. That's why almost 95 percent of a user’s first impression relates to web design. It’s also why web design services can have an immense impact on your company’s bottom line.</p>
-                                                <p>That’s why more companies are not only reevaluating their website’s design but also partnering with Kura, the web design agency that’s driven more than $2.4 billion in revenue for its clients. With over 50 web design awards under our belt, we're confident we can design a custom website that drives sales for your unique business.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    
-                                </div>
-                            </li>
-                            <li>
-                                <div class="list_inner">
-                                    <div class="image">
-                                        <img src="{{ asset('frontend_assets') }}/img/thumbs/4-3.jpg" alt="" />
-                                        <div class="main" data-img-url="{{ asset('frontend_assets') }}/img/news/3.jpg"></div>
-                                        <a class="cavani_tm_full_link" href="#"></a>
-                                    </div>
-                                    <div class="details">
-                                        <div class="metabox">
-                                            <div class="info">
-                                                <span class="category"><a href="#">Branding</a></span>
-                                                <span class="date">August 9, 2021</span>
-                                            </div>
-                                            <div class="title">
-                                                <h3><a href="#">Building brands through customer service</a></h3>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    
-                                    <div class="news_hidden_details">
-                                        <div class="news_popup_informations">
-                                            <div class="text">
-                                                <p>Cavani is a leading web design agency with an award-winning design team that creates innovative, effective websites that capture your brand, improve your conversion rates, and maximize your revenue to help grow your business and achieve your goals.</p>
-                                                <p>In today’s digital world, your website is the first interaction consumers have with your business. That's why almost 95 percent of a user’s first impression relates to web design. It’s also why web design services can have an immense impact on your company’s bottom line.</p>
-                                                <p>That’s why more companies are not only reevaluating their website’s design but also partnering with Kura, the web design agency that’s driven more than $2.4 billion in revenue for its clients. With over 50 web design awards under our belt, we're confident we can design a custom website that drives sales for your unique business.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    
-                                </div>
-                            </li>
-                            <li>
-                                <div class="list_inner">
-                                    <div class="image">
-                                        <img src="{{ asset('frontend_assets') }}/img/thumbs/4-3.jpg" alt="" />
-                                        <div class="main" data-img-url="{{ asset('frontend_assets') }}/img/news/4.jpg"></div>
-                                        <a class="cavani_tm_full_link" href="#"></a>
-                                    </div>
-                                    <div class="details">
-                                        <div class="metabox">
-                                            <div class="info">
-                                                <span class="category"><a href="#">Branding</a></span>
-                                                <span class="date">August 9, 2021</span>
-                                            </div>
-                                            <div class="title">
-                                                <h3><a href="#">Building brands through customer service</a></h3>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    
-                                    <div class="news_hidden_details">
-                                        <div class="news_popup_informations">
-                                            <div class="text">
-                                                <p>Cavani is a leading web design agency with an award-winning design team that creates innovative, effective websites that capture your brand, improve your conversion rates, and maximize your revenue to help grow your business and achieve your goals.</p>
-                                                <p>In today’s digital world, your website is the first interaction consumers have with your business. That's why almost 95 percent of a user’s first impression relates to web design. It’s also why web design services can have an immense impact on your company’s bottom line.</p>
-                                                <p>That’s why more companies are not only reevaluating their website’s design but also partnering with Kura, the web design agency that’s driven more than $2.4 billion in revenue for its clients. With over 50 web design awards under our belt, we're confident we can design a custom website that drives sales for your unique business.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    
-                                </div>
-                            </li>
-                            <li>
-                                <div class="list_inner">
-                                    <div class="image">
-                                        <img src="{{ asset('frontend_assets') }}/img/thumbs/4-3.jpg" alt="" />
-                                        <div class="main" data-img-url="{{ asset('frontend_assets') }}/img/news/5.jpg"></div>
-                                        <a class="cavani_tm_full_link" href="#"></a>
-                                    </div>
-                                    <div class="details">
-                                        <div class="metabox">
-                                            <div class="info">
-                                                <span class="category"><a href="#">Branding</a></span>
-                                                <span class="date">August 9, 2021</span>
-                                            </div>
-                                            <div class="title">
-                                                <h3><a href="#">Building brands through customer service</a></h3>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    
-                                    <div class="news_hidden_details">
-                                        <div class="news_popup_informations">
-                                            <div class="text">
-                                                <p>Cavani is a leading web design agency with an award-winning design team that creates innovative, effective websites that capture your brand, improve your conversion rates, and maximize your revenue to help grow your business and achieve your goals.</p>
-                                                <p>In today’s digital world, your website is the first interaction consumers have with your business. That's why almost 95 percent of a user’s first impression relates to web design. It’s also why web design services can have an immense impact on your company’s bottom line.</p>
-                                                <p>That’s why more companies are not only reevaluating their website’s design but also partnering with Kura, the web design agency that’s driven more than $2.4 billion in revenue for its clients. With over 50 web design awards under our belt, we're confident we can design a custom website that drives sales for your unique business.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    
-                                </div>
-                            </li>
-                            <li>
-                                <div class="list_inner">
-                                    <div class="image">
-                                        <img src="{{ asset('frontend_assets') }}/img/thumbs/4-3.jpg" alt="" />
-                                        <div class="main" data-img-url="{{ asset('frontend_assets') }}/img/news/6.jpg"></div>
-                                        <a class="cavani_tm_full_link" href="#"></a>
-                                    </div>
-                                    <div class="details">
-                                        <div class="metabox">
-                                            <div class="info">
-                                                <span class="category"><a href="#">Branding</a></span>
-                                                <span class="date">August 9, 2021</span>
-                                            </div>
-                                            <div class="title">
-                                                <h3><a href="#">Building brands through customer service</a></h3>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    
-                                    <div class="news_hidden_details">
-                                        <div class="news_popup_informations">
-                                            <div class="text">
-                                                <p>Cavani is a leading web design agency with an award-winning design team that creates innovative, effective websites that capture your brand, improve your conversion rates, and maximize your revenue to help grow your business and achieve your goals.</p>
-                                                <p>In today’s digital world, your website is the first interaction consumers have with your business. That's why almost 95 percent of a user’s first impression relates to web design. It’s also why web design services can have an immense impact on your company’s bottom line.</p>
-                                                <p>That’s why more companies are not only reevaluating their website’s design but also partnering with Kura, the web design agency that’s driven more than $2.4 billion in revenue for its clients. With over 50 web design awards under our belt, we're confident we can design a custom website that drives sales for your unique business.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    
-                                </div>
-                            </li>
+                            @endforeach
+                     
                         </ul>
                     </div>
                 </div>
@@ -761,24 +408,31 @@
                     <div class="form">
                         <div class="left">
                             <div class="fields">
-                                <form action="/" method="post" class="contact_form" id="contact_form">
+                                <form id="contactForm" action="{{ route('contact.store') }}"   method="post" enctype="multipart/form-data">
+                                    @csrf
                                     <div class="returnmessage" data-success="Your message has been received, We will contact you soon."></div>
                                     <div class="empty_notice"><span>Please Fill Required Fields</span></div>
                                     <div class="first">
                                         <ul>
                                             <li>
-                                                <input id="name" type="text" placeholder="Name" autocomplete="off">
+                                                <input id="name" name="name" type="text" placeholder="Name" autocomplete="off">
                                             </li>
+                                       
                                             <li>
-                                                <input id="email" type="text" placeholder="Email" autocomplete="off">
+                                                <input id="email" name="email" type="email" placeholder="Email" autocomplete="off">
                                             </li>
+                                           
                                         </ul>
                                     </div>
                                     <div class="last">
-                                        <textarea id="message" placeholder="Message"></textarea>
+                                        <textarea id="message" name="message" placeholder="Message"></textarea>
                                     </div>
+                                   
                                     <div class="cavani_tm_button">
-                                        <a id="send_message" href="#">Send Message</a>
+                                        {{-- <a id="send_message" href="#">Send Message</a> --}}
+                                        <div id="success">@include('alert.messages')</div>
+                                        <input type="submit" value="send Message">
+                                 
                                     </div>
 
                                     <!-- If you want change mail address to yours, just open "modal" folder >> contact.php and go to line 4 and change detail to yours.  -->

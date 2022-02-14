@@ -13,7 +13,8 @@
                     <div class="page-title-right">
                         <ol class="breadcrumb m-0">
                             <li class="breadcrumb-item"><a href="{{ route('admin.dashboard') }}">Dashboard</a></li>
-                            <li class="breadcrumb-item active">Interest</li>
+                            <li class="breadcrumb-item active">Language</li>
+                            <li class="breadcrumb-item active">Create</li>
                         </ol>
                     </div>
                 </div>
@@ -26,31 +27,46 @@
                     <div class="card">
                         <div class="card-header text-center bg-primary text-white">
                             <div class="card-title">
-                                Add Interest
+                                Add Language
                             </div>
                            
                         </div>
                         <div class="card-body">
-                           <form>
+                           <form action="{{ route('admin.about.language.store') }}"  method="post" enctype="multipart/form-data">
+                            @csrf
                                <div class="row">
                                    <div class="col-12">
                                     <div class="mb-3">
+                                        
                                         <label class="form-label" for="formrow-firstname-input">Title</label>
                                         <input type="text" class="form-control" id="formrow-firstname-input" name="title" value="">
+                                     @error('title')
+                                        <span class="text text-danger">{{$message}}</span>
+                                    @enderror
                                     </div>
-                                   </div>
 
-                                   <div class="form-group mb-3">
-                                    <label class="form-label">Status</label>
-                                    <select name="status" id="" class="form-control">
-                                        <option value>---Select Status---</option>
-                                        <option  value="Active">Active</option>
-                                        <option  value="Deactive">Deactive</option>
-                                    </select>
-                                @error('status')
-                                    <span class="text text-danger">{{$message}}</span>
-                                @enderror
-                                 </div>
+                                    <div class="mb-3">
+                                        
+                                        <label class="form-label" for="formrow-firstname-input">Expert Level(%)</label>
+                                        <input type="text" class="form-control" id="formrow-firstname-input" name="level" value="">
+                                     @error('level')
+                                        <span class="text text-danger">{{$message}}</span>
+                                    @enderror
+                                    </div>
+
+                                    <div class="form-group mb-3">
+                                        <label class="form-label">Status</label>
+                                        <select name="status" id="" class="form-control">
+                                            <option value>---Select Status---</option>
+                                            <option  value="Active">Active</option>
+                                            <option  value="Deactive">Deactive</option>
+                                        </select>
+                                    @error('status')
+                                        <span class="text text-danger">{{$message}}</span>
+                                    @enderror
+                                     </div>
+                                   
+                                   </div>
                                </div>
                                                  
                                     <button type="submit" class="btn btn-primary w-mdm mt-4">Submit</button>

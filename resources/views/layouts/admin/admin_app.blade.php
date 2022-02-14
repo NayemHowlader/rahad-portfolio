@@ -116,7 +116,7 @@
                                 @if (Auth::User()->role == 'SuperAdmin')
                                 <li>
                                     <a href="javascript: void(0);" class="has-arrow">
-                                        <i data-feather="shopping-cart"></i>
+                                        <i data-feather="user"></i>
                                         <span data-key="t-ecommerce">User</span>
                                     </a>
                                     <ul class="sub-menu" aria-expanded="false">
@@ -132,7 +132,7 @@
 
                             <li>
                                 <a href="{{ route('admin.main.index') }}">
-                                    <i data-feather="shopping-cart"></i>
+                                    <i data-feather="sliders"></i>
                                     <span data-key="t-ecommerce">Main</span>
                                 </a>
                             </li>
@@ -140,7 +140,7 @@
 
                             <li>
                                 <a href="javascript: void(0);" class="has-arrow">
-                                    <i data-feather="share-2"></i>
+                                    <i data-feather="info"></i>
                                     <span data-key="t-multi-level">About</span>
                                 </a>
                                 <ul class="sub-menu" aria-expanded="false">
@@ -150,50 +150,50 @@
                                     
 
                                     <li>
-                                        <a href="javascript: void(0);"data-key="t-level-1-2">Interests</a>
+                                        <a href="{{ route('admin.about.interest.index') }}"data-key="t-level-1-2">Interests</a>
                                     </li>
 
                                     <li>
-                                        <a href="javascript: void(0);" data-key="t-level-1-2">Programming</a> 
+                                        <a href="{{ route('admin.about.programming.index') }}" data-key="t-level-1-2">Programming</a> 
                                     </li>
 
                                     <li>
-                                        <a href="javascript: void(0);" data-key="t-level-1-2">Language</a> 
+                                        <a href="{{ route('admin.about.language.index') }}" data-key="t-level-1-2">Language</a> 
                                     </li>
                                     <li>
-                                        <a href="javascript: void(0);" data-key="t-level-1-2">Education</a>
+                                        <a href="{{ route('admin.about.education.index') }}" data-key="t-level-1-2">Education</a>
                                     </li>
                                     <li>
-                                        <a href="javascript: void(0);" data-key="t-level-1-2">Experience</a>
+                                        <a href="{{ route('admin.about.experience.index') }}" data-key="t-level-1-2">Experience</a>
                                     </li>
                                 </ul>
                             </li>
 
                             
                            <li>
-                            <a href="javascript: void(0);">
-                                <i data-feather="share-2"></i>
+                            <a href="{{ route('admin.service.index') }}">
+                                <i data-feather="shopping-bag"></i>
                                 <span data-key="t-multi-level">Services</span>
                             </a>
                            </li>
 
                            <li>
-                            <a href="javascript: void(0);">
+                            <a href="{{ route('admin.partner.index') }}">
                                 <i data-feather="share-2"></i>
                                 <span data-key="t-multi-level">Partners</span>
                             </a>
                            </li>
 
                            <li>
-                            <a href="javascript: void(0);">
-                                <i data-feather="share-2"></i>
+                            <a href="{{ route('admin.testimonial.index') }}">
+                                <i data-feather="aperture"></i>
                                 <span data-key="t-multi-level">Testimonials</span>
                             </a>
                            </li>
                             
                             <li>
                                 <a href="javascript: void(0);" class="has-arrow">
-                                    <i data-feather="shopping-cart"></i>
+                                    <i data-feather="book"></i>
                                     <span data-key="t-ecommerce">Portfolio</span>
                                 </a>
                                 <ul class="sub-menu" aria-expanded="false">
@@ -206,19 +206,19 @@
 
                             <li>
                                 <a href="javascript: void(0);" class="has-arrow">
-                                    <i data-feather="shopping-cart"></i>
+                                    <i data-feather="tv"></i>
                                     <span data-key="t-ecommerce">News</span>
                                 </a>
                                 <ul class="sub-menu" aria-expanded="false">
-                                    <li><a href="About me" key="t-products"><i class="fas fa-users"></i> Add Category </a></li>
-                                    <li><a href="#" data-key="t-product-detail"><i class="fas fa-users"></i> Add News </a></li>
+                                    <li><a href="{{ route('admin.news.category.index') }}" key="t-products"><i class="fas fa-users"></i> Category </a></li>
+                                    <li><a href="{{ route('admin.news.index') }}" data-key="t-product-detail"><i class="fas fa-users"></i> News </a></li>
                                 
                                 </ul>
                             </li>
 
                             <li>
-                                <a href="javascript: void(0);">
-                                    <i data-feather="shopping-cart"></i>
+                                <a href="{{ route('admin.contact.index') }}">
+                                    <i data-feather="message-square"></i>
                                     <span data-key="t-ecommerce">Contact</span>
                                 </a>
                             </li>

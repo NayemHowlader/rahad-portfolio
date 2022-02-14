@@ -14,7 +14,7 @@ class AboutMeController extends Controller
 
 
         $about = AboutMe::first();
-        return view('admin.about.about_me',compact('about'));
+        return view('admin.about.aboutme.index',compact('about'));
     }
 
 
