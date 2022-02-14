@@ -35,10 +35,7 @@ class ReplayMessageController extends Controller
             'replay' => 'required'
         ]);
 
-        // $replay = MessageReplay::create([
-        //     'message_id' => $request->message_id,
-        //     'replay' => $request->replay,
-        // ]);
+     
 
 
         $replay = MessageReplay::create([
@@ -51,8 +48,7 @@ class ReplayMessageController extends Controller
         Contact::where('id',$replay->message_id)->update([
             'status' => '3'
         ]);
-        // $contact = Contact::where('id',$request->message_id)->first();
-        // Mail::to($request->email)->send(new VerifyUserMail($contact));
+    
         return back()->with('alert-success','Message replay Successfully');
     }
 

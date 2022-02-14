@@ -39,7 +39,7 @@ class TestimonialController extends Controller
             'status' => 'required'
         ]);
 
-        $educations = Testimonial::create([
+        Testimonial::create([
             'name' => $request->name,
             'desination' => $request->desination,
             'details' => $request->details,

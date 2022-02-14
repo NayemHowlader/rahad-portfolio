@@ -17,7 +17,7 @@ class CreatePortfoliosTable extends Migration
             $table->id();
             $table->string('category_name');
             $table->string('title');
-            $table->string('details');
+            $table->longText('details');
             $table->string('image')->default('default.png');
             $table->string('created_by');
             $table->string('edited_by')->nullable();

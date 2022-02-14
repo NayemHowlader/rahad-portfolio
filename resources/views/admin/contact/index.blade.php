@@ -10,10 +10,10 @@
                     <div class="page-title-right">
                         <ol class="breadcrumb m-0">
                             <li class="breadcrumb-item"><a href="{{ route('admin.dashboard') }}">Dashboard</a></li>
-                            <li class="breadcrumb-item active">Contact</li>
+                            <li class="breadcrumb-item active">Contacts</li>
                         </ol>
                     </div>
-                    <a href="" class="mb-sm-0 font-size-18 btn btn-primary"><i class="fas fa-plus"></i> All Message</a>
+                    {{-- <a href="" class="mb-sm-0 btn btn-primary"><i class="fas fa-plus"></i> All Message</a> --}}
                 </div>
             </div>
         </div>
@@ -34,8 +34,7 @@
                                 <th>S/N</th>
                                 <th>Name</th>
                                 <th>Email</th>
-                                <th>Message</th>
-                                
+                                <th>Message</th>       
                                 <th>Action</th>
                             </tr>
                             </thead>
@@ -49,9 +48,9 @@
                                     @if ($contact->status == '1')
                                           style="background-color: rgb(185, 181, 181)"
                                     @elseif ($contact->status == '2')
-                                         style="background-color: red"
+                                         style="background-color: #01C273"
                                      @elseif ($contact->status == '3')
-                                         style="background-color: blue"
+                                         style="background-color: white"
                                     @endif
                                     >
 

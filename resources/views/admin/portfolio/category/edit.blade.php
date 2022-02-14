@@ -9,8 +9,8 @@
     <div class="page-title-right">
         <ol class="breadcrumb m-0">
             <li class="breadcrumb-item"><a href="javascript: void(0);">Dashboard</a></li>
-            <li class="breadcrumb-item"><a href="{{ route('admin.portfolio.category.index') }}">Category Edit</a></li>
-            <li class="breadcrumb-item active">Category</li>
+            <li class="breadcrumb-item"><a href="{{ route('admin.portfolio.category.index') }}">PortfolioCategory</a></li>
+            <li class="breadcrumb-item active">Edit</li>
         </ol>
     </div>
     <a href="{{ route('admin.portfolio.category.index') }}" class="mb-sm-0 font-size-18 btn btn-primary"> All Category</a>

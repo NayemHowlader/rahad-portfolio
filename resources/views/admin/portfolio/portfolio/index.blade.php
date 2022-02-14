@@ -11,10 +11,10 @@
                     <div class="page-title-right">
                         <ol class="breadcrumb m-0">
                             <li class="breadcrumb-item"><a href="{{ route('admin.dashboard') }}">Dashboard</a></li>
-                            <li class="breadcrumb-item active">Portfolio</li>
+                            <li class="breadcrumb-item active">Portfolios</li>
                         </ol>
                     </div>
-                    <a href="{{ route('admin.portfolio.create') }}" class="mb-sm-0 font-size-18 btn btn-primary"><i class="fas fa-plus"></i> Add Portfolio</a>
+                    <a href="{{ route('admin.portfolio.create') }}" class="mb-sm-0 btn btn-primary"><i class="fas fa-plus"></i> Add Portfolio</a>
                 </div>
             </div>
         </div>

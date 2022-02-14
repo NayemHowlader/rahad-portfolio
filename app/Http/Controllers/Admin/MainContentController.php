@@ -15,7 +15,11 @@ class MainContentController extends Controller
     public function index()
     {
         $main = MainContent::first();
-        return view('admin.main.index',compact('main'));
+        // return view('admin.main.index',compact('main'));
+
+        return view('admin.main.index',[
+            'main' => $main
+        ]);
     }
 
 

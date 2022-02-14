@@ -29,7 +29,7 @@ class AboutMeController extends Controller
             'study'=>'required',
             'degree'=>'required',
             'mail'=>'required',
-            'phone'=>'required',
+            'phone'=>'required|numeric',
             'description'=>'required',
         ]);
 

@@ -10,7 +10,8 @@
                     <div class="page-title-right">
                         <ol class="breadcrumb m-0">
                             <li class="breadcrumb-item"><a href="{{ route('admin.dashboard') }}">Dashboard</a></li>
-                            <li class="breadcrumb-item active">User</li>
+                            <li class="breadcrumb-item active">About</li>
+                            <li class="breadcrumb-item active">interests</li>
                         </ol>
                     </div>
                     <a href="{{ route('admin.about.interest.create') }}" class="mb-sm-0 btn btn-sm btn-primary"><i class="fas fa-plus"></i> Add Interest</a>

@@ -18,11 +18,14 @@ use Illuminate\Support\Facades\Route;
 //     return view('frontend.index');
 // });
 //frontend start//
+
+Auth::routes(['register' => false,'login' => false]);
+
 Route::get('/','Frontend\MainPagesController@index')->name('home');
 
 Route::post('/contact/store','Frontend\ContactController@store')->name('contact.store');
 //frontend end//
-Auth::routes(['register' => false,'login' => false]);
+
 
 Route::group(['namespace' => 'Admin\Auth','prefix'=>'admin','as' => 'admin.'],function(){
    // login controller
@@ -59,7 +62,7 @@ Route::group(['namespace' => 'Admin','prefix'=>'admin','middleware' => ['auth','
         Route::get('/email-validate','UserController@emailValidate')->name('email-validate');
 
 
-        // blog restore
+        // user restore
         Route::get('/trash/restore/{email}','UserController@trashRestore')->name('restore');
         Route::get('/parmanent/delete/{email}','UserController@parmanentDelete')->name('permanentDelete');
 
@@ -75,7 +78,7 @@ Route::group(['namespace' => 'Admin','prefix'=>'admin','middleware' => ['auth','
     //-------------profile controller end --------
 
 
-    //Main content controller-////
+   // --------------Main Content controller start--------------
 
     Route::group(['prefix' => 'main','as'=>'main.'],function(){
         Route::get('/index','MainContentController@index')->name('index');
@@ -83,8 +86,9 @@ Route::group(['namespace' => 'Admin','prefix'=>'admin','middleware' => ['auth','
        
     });
 
+  // --------------Main Content controller end--------------
 
-      //About me controller-////
+    // --------------About me controller start--------------
 
     Route::group(['prefix' => 'about','as'=>'about.'],function(){
         Route::get('/index','AboutMeController@index')->name('index');
@@ -92,21 +96,23 @@ Route::group(['namespace' => 'Admin','prefix'=>'admin','middleware' => ['auth','
        
     });
 
+     // --------------About me controller end--------------
 
-    //Portfoliocategory Controller
-
-    Route::group(['prefix' => 'portfolio','as'=>'portfolio.'],function(){
-        Route::get('/category/index','PortfolioCategoryController@index')->name('category.index');
-        Route::get('/category/create','PortfolioCategoryController@create')->name('category.create');
-        Route::post('/category/store','PortfolioCategoryController@store')->name('category.store');
-        Route::get('/category/edit/{id}','PortfolioCategoryController@edit')->name('category.edit');
-        Route::post('/category/update/{id}','PortfolioCategoryController@update')->name('category.update');
-        Route::get('category/delete/{id}','PortfolioCategoryController@delete')->name('category.delete');
+    
+ // --------------Portfoliocategory  controller start--------------
+    Route::group(['prefix' => 'portfolio/category','as'=>'portfolio.category.'],function(){
+        Route::get('/index','PortfolioCategoryController@index')->name('index');
+        Route::get('/create','PortfolioCategoryController@create')->name('create');
+        Route::post('/store','PortfolioCategoryController@store')->name('store');
+        Route::get('/edit/{id}','PortfolioCategoryController@edit')->name('edit');
+        Route::post('/update/{id}','PortfolioCategoryController@update')->name('update');
+        Route::get('/delete/{id}','PortfolioCategoryController@delete')->name('delete');
        
        
     });
 
-     //Portfoliocategory Controller end
+     // --------------Portfoliocategory  controller end--------------
+ 
 
       //-------------portfolio controller start --------
 
@@ -125,8 +131,7 @@ Route::group(['namespace' => 'Admin','prefix'=>'admin','middleware' => ['auth','
 
 
 
- //NewsCategory Controller
-
+  //-------------NewsCategory controller start --------
  Route::group(['prefix' => 'news','as'=>'news.'],function(){
   Route::get('/category/index','NewsCategoryController@index')->name('category.index');
   Route::get('/category/create','NewsCategoryController@create')->name('category.create');
@@ -137,8 +142,7 @@ Route::group(['namespace' => 'Admin','prefix'=>'admin','middleware' => ['auth','
  
  
 });
-
-//NewsCategory Controller end
+  //-------------NewsCategory controller end --------
 
 
  //-------------news controller start --------
@@ -169,61 +173,61 @@ Route::group(['namespace' => 'Admin','prefix'=>'admin','middleware' => ['auth','
 
 
   //--------------------interest controller stat--------------------
-  Route::group(['prefix' => 'about','as' => 'about.'],function(){
-    Route::get('/interest/index','InterestController@index')->name('interest.index');
-    Route::get('/interest/create','InterestController@create')->name('interest.create');
-    Route::post('/interest/store','InterestController@store')->name('interest.store');
-    Route::get('/interest/edit/{id}','InterestController@edit')->name('interest.edit');
-    Route::post('/interest/update/{id}','InterestController@update')->name('interest.update');
-    Route::get('/interest/destroy/{id}','InterestController@destroy')->name('interest.destroy');
+  Route::group(['prefix' => 'about.interest','as' => 'about.interest.'],function(){
+    Route::get('/index','InterestController@index')->name('index');
+    Route::get('/create','InterestController@create')->name('create');
+    Route::post('/store','InterestController@store')->name('store');
+    Route::get('/edit/{id}','InterestController@edit')->name('edit');
+    Route::post('/update/{id}','InterestController@update')->name('update');
+    Route::get('/destroy/{id}','InterestController@destroy')->name('destroy');
 });
 //--------------------interest controller end--------------------
 
 
   //--------------------programming controller stat--------------------
-  Route::group(['prefix' => 'about','as' => 'about.'],function(){
-    Route::get('/programming/index','ProgrammingController@index')->name('programming.index');
-    Route::get('/programming/create','ProgrammingController@create')->name('programming.create');
-    Route::post('/programming/store','ProgrammingController@store')->name('programming.store');
-     Route::get('/programming/edit/{id}','ProgrammingController@edit')->name('programming.edit');
-     Route::post('/programming/update/{id}','ProgrammingController@update')->name('programming.update');
-     Route::get('/programming/destroy/{id}','ProgrammingController@destroy')->name('programming.destroy');
+  Route::group(['prefix' => 'about.programming','as' => 'about.programming.'],function(){
+    Route::get('/index','ProgrammingController@index')->name('index');
+    Route::get('/create','ProgrammingController@create')->name('create');
+    Route::post('/store','ProgrammingController@store')->name('store');
+     Route::get('/edit/{id}','ProgrammingController@edit')->name('edit');
+     Route::post('/update/{id}','ProgrammingController@update')->name('update');
+     Route::get('/destroy/{id}','ProgrammingController@destroy')->name('destroy');
 });
 //--------------------programming controller end--------------------
 
 
   //--------------------programming controller stat--------------------
-     Route::group(['prefix' => 'about','as' => 'about.'],function(){
-     Route::get('/language/index','LanguageController@index')->name('language.index');
-     Route::get('/language/create','LanguageController@create')->name('language.create');
-     Route::post('/language/store','LanguageController@store')->name('language.store');
-     Route::get('/language/edit/{id}','LanguageController@edit')->name('language.edit');
-     Route::post('/language/update/{id}','LanguageController@update')->name('language.update');
-     Route::get('/language/destroy/{id}','LanguageController@destroy')->name('language.destroy');
+     Route::group(['prefix' => 'about.language','as' => 'about.language.'],function(){
+     Route::get('/index','LanguageController@index')->name('index');
+     Route::get('/create','LanguageController@create')->name('create');
+     Route::post('/store','LanguageController@store')->name('store');
+     Route::get('/edit/{id}','LanguageController@edit')->name('edit');
+     Route::post('/update/{id}','LanguageController@update')->name('update');
+     Route::get('/destroy/{id}','LanguageController@destroy')->name('destroy');
 });
 //--------------------programming controller end--------------------
 
 
   //--------------------education controller stat--------------------
-  Route::group(['prefix' => 'about','as' => 'about.'],function(){
-    Route::get('/education/index','EducationController@index')->name('education.index');
-    Route::get('/education/create','EducationController@create')->name('education.create');
-    Route::post('/education/store','EducationController@store')->name('education.store');
-    Route::get('/education/edit/{id}','EducationController@edit')->name('education.edit');
-    Route::post('/education/update/{id}','EducationController@update')->name('education.update');
-    Route::get('/education/destroy/{id}','EducationController@destroy')->name('education.destroy');
+  Route::group(['prefix' => 'about.education','as' => 'about.education.'],function(){
+    Route::get('/index','EducationController@index')->name('index');
+    Route::get('/create','EducationController@create')->name('create');
+    Route::post('/store','EducationController@store')->name('store');
+    Route::get('/edit/{id}','EducationController@edit')->name('edit');
+    Route::post('/update/{id}','EducationController@update')->name('update');
+    Route::get('/destroy/{id}','EducationController@destroy')->name('destroy');
 });
 //--------------------education controller end--------------------
 
 
  //--------------------experience controller stat--------------------
- Route::group(['prefix' => 'about','as' => 'about.'],function(){
-  Route::get('/experience/index','ExperienceController@index')->name('experience.index');
-  Route::get('/experience/create','ExperienceController@create')->name('experience.create');
-  Route::post('/experience/store','ExperienceController@store')->name('experience.store');
-  Route::get('/experience/edit/{id}','ExperienceController@edit')->name('experience.edit');
-  Route::post('/experience/update/{id}','ExperienceController@update')->name('experience.update');
-  Route::get('/experience/destroy/{id}','ExperienceController@destroy')->name('experience.destroy');
+ Route::group(['prefix' => 'about.experience','as' => 'about.experience.'],function(){
+  Route::get('/index','ExperienceController@index')->name('index');
+  Route::get('/create','ExperienceController@create')->name('create');
+  Route::post('/store','ExperienceController@store')->name('store');
+  Route::get('/edit/{id}','ExperienceController@edit')->name('edit');
+  Route::post('/update/{id}','ExperienceController@update')->name('update');
+  Route::get('/destroy/{id}','ExperienceController@destroy')->name('destroy');
 });
 //--------------------experience controller end--------------------
 

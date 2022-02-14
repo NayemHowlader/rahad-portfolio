@@ -66,7 +66,7 @@
                                     <div class="mb-3">
                                         
                                         <div class="form-group">
-                                            <label >Portfolio Image</label>
+                                            <label >Portfolio Image(600*600)</label>
                                             <input type="file" class="form-control" name="image" >
                                             @error('image')
                                               <span class="text text-danger">{{$message}}</span>

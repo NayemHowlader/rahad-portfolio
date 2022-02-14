@@ -35,7 +35,7 @@ class EducationController extends Controller
     public function store(Request $request){
         $request->validate([
             'institute' => 'required|string|min:3|max:50',
-            'degree' => 'required|string|min:3|max:30',
+            'degree' => 'required|string|min:3|max:50',
             'year' => 'required|string|min:3|max:30',
             'status' => 'required'
         ]);
@@ -66,7 +66,7 @@ class EducationController extends Controller
 
         $request->validate([
             'institute' => 'required|string|min:3|max:50',
-            'degree' => 'required|string|min:3|max:30',
+            'degree' => 'required|string|min:3|max:50',
             'year' => 'required|string|min:3|max:30',
             'status' => 'required',
         ]);

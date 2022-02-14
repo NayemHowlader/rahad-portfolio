@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
         <meta charset="utf-8" />
-        <title>Bir Bazar</title>
+        <title>Rahad Amin</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
         <meta content="Themesbrand" name="author" />
@@ -51,16 +51,16 @@
                                     <img src="{{asset('admin_assets')}}/images/logo.png" alt="" height="30">
                                 </span>
                                 <span class="logo-lg">
-                                    <img src="" alt="" height="24"> <span class="logo-txt">Bir Bazar</span>
+                                    <img src="" alt="" height="24"> <span class="logo-txt">Rahad Amin</span>
                                 </span>
                             </a>
 
                             <a href="{{ route('admin.dashboard') }}" class="logo logo-light">
                                 <span class="logo-sm">
-                                    <img src="{{asset('admin_assets')}}/images/logo.png" alt="" height="30">
+                                    <img src="#" alt="" height="30">
                                 </span>
                                 <span class="logo-lg">
-                                    <img src="{{asset('admin_assets')}}/images/logo.png" alt="" height="24"> <span class="logo-txt">Bir Bazar</span>
+                                   <span style="font-size: 20px">Rahad Amin</span>
                                 </span>
                             </a>
                         </div>
@@ -115,14 +115,11 @@
                             @if (Auth::check())
                                 @if (Auth::User()->role == 'SuperAdmin')
                                 <li>
-                                    <a href="javascript: void(0);" class="has-arrow">
+                                    <a href="{{ route('admin.user.index') }}">
                                         <i data-feather="user"></i>
                                         <span data-key="t-ecommerce">User</span>
                                     </a>
-                                    <ul class="sub-menu" aria-expanded="false">
-                                        <li><a href="{{ route('admin.user.index') }}" key="t-products"><i class="fas fa-users"></i> Admin</a></li>
-                                        <li><a href="#" data-key="t-product-detail"><i class="fas fa-users"></i> Other</a></li>
-                                    </ul>
+              
                                 </li>
                                 @endif
                             @endif
@@ -172,33 +169,34 @@
                             
                            <li>
                             <a href="{{ route('admin.service.index') }}">
-                                <i data-feather="shopping-bag"></i>
+                                <i class=" fab fa-servicestack"></i>
+                               
                                 <span data-key="t-multi-level">Services</span>
                             </a>
                            </li>
 
                            <li>
                             <a href="{{ route('admin.partner.index') }}">
-                                <i data-feather="share-2"></i>
+                                <i class="fas fa-hands-helping"></i>
                                 <span data-key="t-multi-level">Partners</span>
                             </a>
                            </li>
 
                            <li>
                             <a href="{{ route('admin.testimonial.index') }}">
-                                <i data-feather="aperture"></i>
+                                <i class="fas fa-book"></i>
                                 <span data-key="t-multi-level">Testimonials</span>
                             </a>
                            </li>
                             
                             <li>
                                 <a href="javascript: void(0);" class="has-arrow">
-                                    <i data-feather="book"></i>
+                                    <i class="fas fa-user-circle"></i>
                                     <span data-key="t-ecommerce">Portfolio</span>
                                 </a>
                                 <ul class="sub-menu" aria-expanded="false">
-                                    <li><a href="{{ route('admin.portfolio.category.index') }}" key="t-products"><i class="fas fa-users"></i>Category </a></li>
-                                    <li><a href="{{ route('admin.portfolio.index') }}" data-key="t-product-detail"><i class="fas fa-users"></i> All Portfolio </a></li>
+                                    <li><a href="{{ route('admin.portfolio.category.index') }}" key="t-products">Category </a></li>
+                                    <li><a href="{{ route('admin.portfolio.index') }}" data-key="t-product-detail">Portfolios </a></li>
                                 
                                 </ul>
                             </li>
@@ -206,12 +204,12 @@
 
                             <li>
                                 <a href="javascript: void(0);" class="has-arrow">
-                                    <i data-feather="tv"></i>
+                                    <i class="fas fa-newspaper"></i>
                                     <span data-key="t-ecommerce">News</span>
                                 </a>
                                 <ul class="sub-menu" aria-expanded="false">
-                                    <li><a href="{{ route('admin.news.category.index') }}" key="t-products"><i class="fas fa-users"></i> Category </a></li>
-                                    <li><a href="{{ route('admin.news.index') }}" data-key="t-product-detail"><i class="fas fa-users"></i> News </a></li>
+                                    <li><a href="{{ route('admin.news.category.index') }}" key="t-products">Category </a></li>
+                                    <li><a href="{{ route('admin.news.index') }}" data-key="t-product-detail">News </a></li>
                                 
                                 </ul>
                             </li>

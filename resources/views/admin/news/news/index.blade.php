@@ -14,7 +14,7 @@
                             <li class="breadcrumb-item active">News</li>
                         </ol>
                     </div>
-                    <a href="{{ route('admin.news.create') }}" class="mb-sm-0 font-size-18 btn btn-primary"><i class="fas fa-plus"></i> Add News</a>
+                    <a href="{{ route('admin.news.create') }}" class="mb-sm-0 btn btn-primary"><i class="fas fa-plus"></i> Add News</a>
                 </div>
             </div>
         </div>

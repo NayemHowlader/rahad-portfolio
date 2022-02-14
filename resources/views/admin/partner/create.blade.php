@@ -37,7 +37,7 @@
                                <div class="row">
                                    <div class="col-12">
                                     <div class="form-group mb-3">
-                                        <label class="form-label">Partner Logo</label>
+                                        <label class="form-label">Partner Logo(87*87)</label>
                                         <input type="file" name="image" class="form-control"/>
                                       
                                     </div>

@@ -14,6 +14,7 @@
                         <ol class="breadcrumb m-0">
                             <li class="breadcrumb-item"><a href="{{ route('admin.dashboard') }}">Dashboard</a></li>
                             <li class="breadcrumb-item active">Contact</li>
+                            <li class="breadcrumb-item active">View</li>
                         </ol>
                     </div>
                 </div>
@@ -53,8 +54,8 @@
                                  <div class="mb-3">
                                      <label class="form-label" for="formrow-firstname-input">Message</label>
                                      
-                                     
-                                     <input type="text" readonly class="form-control" id="formrow-email-input" name="sub_title2" value="{{  $contact->message  }}">
+                                     <textarea class="form-control" readonly id="exampleFormControlTextarea1" name="replay" rows="3">{{  $contact->message  }}</textarea>
+                     
                                      
                                  </div>
                                 </div>

@@ -13,7 +13,7 @@
                             <li class="breadcrumb-item active">User</li>
                         </ol>
                     </div>
-                    <a href="{{ route('admin.user.index') }}" class="mb-sm-0 font-size-18 btn btn-primary">All User</a>
+                    <a href="{{ route('admin.user.index') }}" class="mb-sm-0 btn btn-primary">All User</a>
                 </div>
             </div>
         </div>

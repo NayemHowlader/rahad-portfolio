@@ -104,7 +104,6 @@
                                 <div class="col-12">
                                  <div class="mb-3">
                                      <label class="form-label" for="formrow-firstname-input">Details</label>
-                                     
 
                                      <textarea id="summernote" name="description">{{ $about->description }}</textarea>
                                                 

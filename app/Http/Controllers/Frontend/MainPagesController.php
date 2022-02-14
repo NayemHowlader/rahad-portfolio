@@ -25,8 +25,8 @@ class MainPagesController extends Controller
 
         $main = MainContent::first();
         $aboutme = AboutMe::first();
-        $services = Service::where('status','Active')->orderBy('id', 'DESC')->get();
-        $interestes = Interest::where('status','Active')->orderBy('id', 'DESC')->get();
+        $services = Service::where('status','Active')->orderBy('id', 'ASC')->get();
+        $interestes = Interest::where('status','Active')->orderBy('id', 'ASC')->get();
         $programmings = Programming::where('status','Active')->orderBy('id', 'DESC')->get();
         $languages = Language::where('status','Active')->orderBy('id', 'DESC')->get();
         $educations = Education::where('status','Active')->orderBy('id', 'DESC')->get();

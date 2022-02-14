@@ -13,7 +13,7 @@
                             <li class="breadcrumb-item active">User</li>
                         </ol>
                     </div>
-                    <a href="{{ route('admin.user.create') }}" class="mb-sm-0 font-size-18 btn btn-primary"><i class="fas fa-plus"></i> Add User</a>
+                    <a href="{{ route('admin.user.create') }}" class="mb-sm-0 btn btn-primary"><i class="fas fa-plus"></i> Add User</a>
                 </div>
             </div>
         </div>

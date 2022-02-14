@@ -14,6 +14,8 @@
                         <ol class="breadcrumb m-0">
                             <li class="breadcrumb-item"><a href="{{ route('admin.dashboard') }}">Dashboard</a></li>
                             <li class="breadcrumb-item active">News</li>
+                            <li class="breadcrumb-item active">Create</li>
+                            
                         </ol>
                     </div>
                 </div>
@@ -66,7 +68,7 @@
                                     <div class="mb-3">
                                         
                                         <div class="form-group">
-                                            <label >Portfolio Image</label>
+                                            <label >News Image(600*600)</label>
                                             <input type="file" class="form-control" name="image" >
                                             @error('image')
                                               <span class="text text-danger">{{$message}}</span>

@@ -15,7 +15,7 @@
                     <h3 class="name">{{$main->title}}</h3>
                     <span class="line"></span>
                     <h3 class="job">
-                        <span class="cd-headline zoom"> <!-- ANIMATE TEXT VALUES: zoom, rotate-1, letters type, letters rotate-2, loading-bar, slide, clip, letters rotate-3, letters scale, push,  -->
+                        <span class="cd-headline zoom"><!-- ANIMATE TEXT VALUES: zoom, rotate-1, letters type, letters rotate-2, loading-bar, slide, clip, letters rotate-3, letters scale, push,  -->
                             <span class="blc">Creative</span>
                             <span class="cd-words-wrapper">
                               <b class="is-visible">{{$main->sub_title1}}</b>
@@ -42,7 +42,7 @@
                         </div>
                         <div class="wrapper">
                             <div class="left">
-                                <p>{{$aboutme->description}}</p>
+                                <p>{!! $aboutme->description !!}</p>
                             </div>
                             <div class="right">
                                 <ul>
@@ -95,7 +95,7 @@
                         <div class="wrapper">
                             <div class="programming">
                                 <div class="cavani_tm_title">
-                                    <span>Programming</span>
+                                    <span>My Skills</span>
                                 </div>
                                 @foreach ($programmings as $programming)
                                     
@@ -298,7 +298,7 @@
                                         <div class="popup_details">
                                             <div class="main_details">
                                                 <div class="textbox">
-                                                    <p>{{ $portfolio->details }}</p>
+                                                    <span>{!! $portfolio->details !!}</span>
                                                     <img src="{{asset('photo/portfolio')}}/{{ $portfolio->image }}" alt="" />
                                                    
                                                 </div>
@@ -344,21 +344,25 @@
                                     </div>
                                     <div class="details">
                                         <div class="metabox">
+
                                             <div class="info">
                                                 <span class="category"><a href="#">{{ $news->category_name }}</a></span>
                                                 <span class="date">{{ $news->created_at->format('Y-m-d') }}</span>
                                             </div>
+                                            
                                             <div class="title">
                                                 <h3><a href="#">{{ $news->title }}</a></h3>
-                            
+ 
                                             </div>
+                                           
+                                           
                                         </div>
                                     </div>
                                     
                                     <div class="news_hidden_details">
                                         <div class="news_popup_informations">
                                             <div class="text">
-                                                <p>{{ $news->details }}</p>
+                                                <p>{!! $news->details !!}</p>
                                                 <img src="{{asset('photo/news')}}/{{ $news->image }}" alt="" />
                                         
                                             </div>
@@ -388,19 +392,19 @@
                             <li>
                                 <div class="list_inner">
                                     <i class="icon-location"></i>
-                                    <span>Ave Street, New York, USA</span>
+                                    <span>House#27, Road#09, Sector#11, Uttara, Dhaka – 1230</span>
                                 </div>
                             </li>
                             <li>
                                 <div class="list_inner">
                                     <i class="icon-mail-3"></i>
-                                    <span><a href="#">hello@cavani.com</a></span>
+                                    <span><a href="#">rahadamin00@gmail.com</a></span>
                                 </div>
                             </li>
                             <li>
                                 <div class="list_inner">
                                     <i class="icon-mobile"></i>
-                                    <span>+77 022 444 05 05</span>
+                                    <span>+880 1682320494</span>
                                 </div>
                             </li>
                         </ul>
@@ -442,7 +446,7 @@
                         </div>
                         <div class="right">
                             <div class="map_wrap">
-                                <div class="map" id="ieatmaps"></div>
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3648.327811464465!2d90.39018361433055!3d23.87799178980843!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c54bfc02daf1%3A0xd1c4fe68e1a712e3!2sBIR%20IT!5e0!3m2!1sen!2sbd!4v1644876532566!5m2!1sen!2sbd" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                             </div>
                         </div>
                     </div>
