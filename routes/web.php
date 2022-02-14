@@ -173,7 +173,7 @@ Route::group(['namespace' => 'Admin','prefix'=>'admin','middleware' => ['auth','
 
 
   //--------------------interest controller stat--------------------
-  Route::group(['prefix' => 'about.interest','as' => 'about.interest.'],function(){
+  Route::group(['prefix' => 'about/interest','as' => 'about.interest.'],function(){
     Route::get('/index','InterestController@index')->name('index');
     Route::get('/create','InterestController@create')->name('create');
     Route::post('/store','InterestController@store')->name('store');
@@ -185,7 +185,7 @@ Route::group(['namespace' => 'Admin','prefix'=>'admin','middleware' => ['auth','
 
 
   //--------------------programming controller stat--------------------
-  Route::group(['prefix' => 'about.programming','as' => 'about.programming.'],function(){
+  Route::group(['prefix' => 'about/programming','as' => 'about.programming.'],function(){
     Route::get('/index','ProgrammingController@index')->name('index');
     Route::get('/create','ProgrammingController@create')->name('create');
     Route::post('/store','ProgrammingController@store')->name('store');
@@ -197,7 +197,7 @@ Route::group(['namespace' => 'Admin','prefix'=>'admin','middleware' => ['auth','
 
 
   //--------------------programming controller stat--------------------
-     Route::group(['prefix' => 'about.language','as' => 'about.language.'],function(){
+     Route::group(['prefix' => 'about/language','as' => 'about.language.'],function(){
      Route::get('/index','LanguageController@index')->name('index');
      Route::get('/create','LanguageController@create')->name('create');
      Route::post('/store','LanguageController@store')->name('store');
@@ -209,7 +209,7 @@ Route::group(['namespace' => 'Admin','prefix'=>'admin','middleware' => ['auth','
 
 
   //--------------------education controller stat--------------------
-  Route::group(['prefix' => 'about.education','as' => 'about.education.'],function(){
+  Route::group(['prefix' => 'about/education','as' => 'about.education.'],function(){
     Route::get('/index','EducationController@index')->name('index');
     Route::get('/create','EducationController@create')->name('create');
     Route::post('/store','EducationController@store')->name('store');
@@ -221,7 +221,7 @@ Route::group(['namespace' => 'Admin','prefix'=>'admin','middleware' => ['auth','
 
 
  //--------------------experience controller stat--------------------
- Route::group(['prefix' => 'about.experience','as' => 'about.experience.'],function(){
+ Route::group(['prefix' => 'about/experience','as' => 'about.experience.'],function(){
   Route::get('/index','ExperienceController@index')->name('index');
   Route::get('/create','ExperienceController@create')->name('create');
   Route::post('/store','ExperienceController@store')->name('store');
@@ -267,7 +267,7 @@ Route::group(['prefix' => 'contact','as' => 'contact.'],function(){
 
 
           //--------------------Contact replay controller stat--------------------
-          Route::group(['prefix' => 'contact.replay','as' => 'contact.replay.'],function(){
+          Route::group(['prefix' => 'contact/replay','as' => 'contact.replay.'],function(){
             Route::get('/index/{id}','ReplayMessageController@index')->name('index');
             Route::get('/replay/{id}','ReplayMessageController@replay')->name('replay');
             // Route::get('/create','ServiceController@create')->name('create');

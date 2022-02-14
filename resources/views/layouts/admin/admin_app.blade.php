@@ -217,7 +217,7 @@
                             <li>
                                 <a href="{{ route('admin.contact.index') }}">
                                     <i data-feather="message-square"></i>
-                                    <span data-key="t-ecommerce">Contact</span>
+                                    <span data-key="t-ecommerce">Contact <span class="text-danger">({{ UncreadMassages() }})</span></span>
                                 </a>
                             </li>
                             

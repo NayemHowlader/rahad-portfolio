@@ -1,8 +1,5 @@
 <!DOCTYPE html>
-<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
-<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
-<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
-<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+<html lang="en">
 
 <head>
 
@@ -22,7 +19,7 @@
 
 <link rel="stylesheet" type="text/css" href="{{ asset('frontend_assets') }}/css/plugins.css" />
 <link rel="stylesheet" type="text/css" href="{{ asset('frontend_assets') }}/css/style.css" />
-<!--[if lt IE 9]> <script type="text/javascript" src="js/modernizr.custom.js"></script> <![endif]-->
+
 <!-- /STYLES -->
 
 </head>
@@ -42,7 +39,7 @@
 		<div class="cavani_tm_modalbox">
 			<div class="box_inner">
 				<div class="close">
-					<a href="#"><img class="svg" src="{{ asset('frontend_assets') }}/img/svg/cancel.svg" alt="" /></a>
+					<a href="#"><img class="svg" src="{{ asset('frontend_assets') }}/img/svg/dark-2.png" alt="" /></a>
 				</div>
 				<div class="description_wrap"></div>
 			</div>
@@ -52,7 +49,7 @@
 		<!-- HEADER -->
 		<div class="cavani_tm_header">
 			<div class="logo">
-				<a href=""><img src="{{ asset('frontend_assets') }}/img/logo/dark.png" alt="" /></a>
+				<a href=""><img src="{{ asset('frontend_assets') }}/img/svg/dark-2.png" alt="" /></a>
 			</div>
 			<div class="menu">
 				<ul class="transition_link">
