@@ -1436,7 +1436,7 @@ h6 { font-size: 16px; }
 	float: left;
 }
 .cavani_tm_modalbox .popup_details .top_image{
-	position: relative;
+	position: absolute;
 	overflow: hidden;
 	margin-bottom: 37px;
 }
@@ -1708,7 +1708,7 @@ h6 { font-size: 16px; }
 	float: left;
 }
 .cavani_tm_modalbox .news_popup_informations .image{
-	position: relative;
+	position: absolute;
 	margin-bottom: 37px;
 }
 .cavani_tm_modalbox .news_popup_informations .image img{

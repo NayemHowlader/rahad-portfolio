@@ -13,7 +13,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-<title>Cavani | Home</title>
+<title>Rahad Amin</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.css">
 
 <!-- STYLES -->
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
@@ -51,7 +52,7 @@
 		<!-- HEADER -->
 		<div class="cavani_tm_header">
 			<div class="logo">
-				<a href="#"><img src="{{ asset('frontend_assets') }}/img/logo/dark.png" alt="" /></a>
+				<a href=""><img src="{{ asset('frontend_assets') }}/img/logo/dark.png" alt="" /></a>
 			</div>
 			<div class="menu">
 				<ul class="transition_link">

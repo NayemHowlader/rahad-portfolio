@@ -24,6 +24,10 @@
 <!-- / WRAPPER ALL -->
 
 <!-- SCRIPTS -->
+<!-- Bootstrap core JS-->
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
 <script src="{{ asset('frontend_assets') }}/js/jquery.js"></script>
 <!--[if lt IE 10]> <script type="text/javascript" src="js/ie8.js"></script> <![endif]-->	
 <script src="{{ asset('frontend_assets') }}/js/plugins.js"></script>

@@ -32,7 +32,7 @@
                             <div class="flex-grow-1">
                                 <h5 class="text-muted mb-3 lh-1 d-block">Super Admin</h5>
                                 <h6 class="mb-3">
-                                    {{-- <span>{{ $superAdmin }}</span> --}}
+                                  <span>{{ $superadmin }}</span>
                                 </h6>
                             </div>
 
@@ -44,7 +44,7 @@
                 </div><!-- end card -->
             </div><!-- end col -->
 
-            {{-- <div class="col-xl-3 col-md-6">
+            <div class="col-xl-3 col-md-6">
                 <!-- card -->
                 <div class="card card-h-100">
                     <!-- card body -->
@@ -53,18 +53,17 @@
                             <div class="flex-grow-1">
                                 <h5 class="text-muted mb-3 lh-1 d-block">Admin</h5>
                                 <h6 class="mb-3">
-                                    <span>{{ $admin }}</span>
+                                    <span>{{ $admin }}</span> 
                                 </h6>
                             </div>
 
-                            <div class="admin-icon" style="color: #f0674c;font-size:25px">
-                                <i class="fas fa-user-cog"></i>
+                            <div class="admin-icon">
+                                <i class="fas fa-user-shield" style="color: #f0674c;font-size:25px"></i>
                             </div>
                         </div>
                     </div><!-- end card body -->
                 </div><!-- end card -->
             </div><!-- end col -->
-
 
 
             <div class="col-xl-3 col-md-6">
@@ -76,12 +75,12 @@
                             <div class="flex-grow-1">
                                 <h5 class="text-muted mb-3 lh-1 d-block">Moderator</h5>
                                 <h6 class="mb-3">
-                                    <span>{{ $moderator }}</span>
+                                     <span>{{ $moderator }}</span> 
                                 </h6>
                             </div>
 
-                            <div class="admin-icon" style="color: #f0674c;font-size:25px">
-                                <i class="fas fa-user-alt"></i>
+                            <div class="admin-icon">
+                                <i class="fas fa-user-shield" style="color: #f0674c;font-size:25px"></i>
                             </div>
                         </div>
                     </div><!-- end card body -->
@@ -96,14 +95,15 @@
                     <div class="card-body">
                         <div class="d-flex align-items-center">
                             <div class="flex-grow-1">
-                                <h5 class="text-muted mb-3 lh-1 d-block">Blog</h5>
+                                <h5 class="text-muted mb-3 lh-1 d-block">Services</h5>
                                 <h6 class="mb-3">
-                                    <span>{{ $blog }}</span>
+                                <span>{{ $services }}</span> 
                                 </h6>
                             </div>
 
-                            <div class="admin-icon" style="color: #f0674c;font-size:25px">
-                                <i class="fab fa-blogger"></i>
+                            <div class="admin-icon">
+                
+                                <i class="fab fa-servicestack" style="color: #f0674c;font-size:25px"></i>
                             </div>
                         </div>
                     </div><!-- end card body -->
@@ -117,14 +117,15 @@
                     <div class="card-body">
                         <div class="d-flex align-items-center">
                             <div class="flex-grow-1">
-                                <h5 class="text-muted mb-3 lh-1 d-block">RequestQuote</h5>
+                                <h5 class="text-muted mb-3 lh-1 d-block">Partners</h5>
                                 <h6 class="mb-3">
-                                    <span>{{ $requestQuote }}</span>
+                                   <span>{{ $partners }}</span> 
                                 </h6>
                             </div>
 
-                            <div class="admin-icon" style="color: #f0674c;font-size:25px">
-                                <i class="fas fa-poll-h"></i>
+                            <div class="admin-icon">
+                            
+                                <i class="fas fa-hands-helping" style="color: #f0674c;font-size:25px"></i>
                             </div>
                         </div>
                     </div><!-- end card body -->
@@ -139,19 +140,20 @@
                     <div class="card-body">
                         <div class="d-flex align-items-center">
                             <div class="flex-grow-1">
-                                <h5 class="text-muted mb-3 lh-1 d-block">Partner</h5>
+                                <h5 class="text-muted mb-3 lh-1 d-block">Testimonials</h5>
                                 <h6 class="mb-3">
-                                    <span>{{ $partner }}</span>
+                                    <span>{{ $testimonials }}</span> 
                                 </h6>
                             </div>
 
-                            <div class="admin-icon" style="color: #f0674c;font-size:25px">
-                                <i class="fas fa-user-friends"></i>
+                            <div class="admin-icon">
+                                <i class="fas fa-book" style="color: #f0674c;font-size:25px"></i>
                             </div>
                         </div>
                     </div><!-- end card body -->
                 </div><!-- end card -->
             </div><!-- end col -->
+
 
             <div class="col-xl-3 col-md-6">
                 <!-- card -->
@@ -160,19 +162,42 @@
                     <div class="card-body">
                         <div class="d-flex align-items-center">
                             <div class="flex-grow-1">
-                                <h5 class="text-muted mb-3 lh-1 d-block">Order</h5>
+                                <h5 class="text-muted mb-3 lh-1 d-block">Portfolios</h5>
                                 <h6 class="mb-3">
-                                    <span>{{ $order }}</span>
+                                   <span>{{ $portfolios }}</span> 
                                 </h6>
                             </div>
 
-                            <div class="admin-icon" style="color: #f0674c;font-size:25px">
-                                <i class="fas fa-user-cog"></i>
+                            <div class="admin-icon">
+                                <i class="fas fa-user-circle" style="color: #f0674c;font-size:25px"></i>
                             </div>
                         </div>
                     </div><!-- end card body -->
                 </div><!-- end card -->
-            </div><!-- end col --> --}}
+            </div><!-- end col -->
+
+
+
+            <div class="col-xl-3 col-md-6">
+                <!-- card -->
+                <div class="card card-h-100">
+                    <!-- card body -->
+                    <div class="card-body">
+                        <div class="d-flex align-items-center">
+                            <div class="flex-grow-1">
+                                <h5 class="text-muted mb-3 lh-1 d-block">News</h5>
+                                <h6 class="mb-3">
+                             <span>{{ $news }}</span> 
+                                </h6>
+                            </div>
+
+                            <div class="admin-icon">
+                                <i class="fas fa-newspaper" style="color: #f0674c;font-size:25px"></i>
+                            </div>
+                        </div>
+                    </div><!-- end card body -->
+                </div><!-- end card -->
+            </div><!-- end col -->
 
         </div><!-- end row-->
     </div>

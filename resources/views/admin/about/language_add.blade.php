@@ -43,6 +43,18 @@
                                         <label class="form-label" for="formrow-firstname-input">Skill Level(1)</label>
                                         <input type="number" class="form-control" id="formrow-firstname-input" name="title" value="">
                                     </div>
+
+                                    <div class="form-group mb-3">
+                                        <label class="form-label">Status</label>
+                                        <select name="status" id="" class="form-control">
+                                            <option value>---Select Status---</option>
+                                            <option  value="Active">Active</option>
+                                            <option  value="Deactive">Deactive</option>
+                                        </select>
+                                    @error('status')
+                                        <span class="text text-danger">{{$message}}</span>
+                                    @enderror
+                                     </div>
                                    </div>
                                </div>
                                                  
