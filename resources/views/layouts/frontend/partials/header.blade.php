@@ -71,7 +71,7 @@
 		<div class="cavani_tm_topbar">
 			<div class="topbar_inner">
 				<div class="logo">
-					<a href="#"><img src="{{ asset('frontend_assets') }}/img/logo/dark.png" alt="" /></a>
+					<a href="#"><img src="{{ asset('frontend_assets') }}/img/logo/dark-2.png" alt="" /></a>
 				</div>
 				<div class="trigger">
 					<div class="hamburger hamburger--slider">

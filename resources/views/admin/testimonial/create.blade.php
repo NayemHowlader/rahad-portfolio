@@ -13,7 +13,7 @@
                     <div class="page-title-right">
                         <ol class="breadcrumb m-0">
                             <li class="breadcrumb-item"><a href="{{ route('admin.dashboard') }}">Dashboard</a></li>
-                            <li class="breadcrumb-item active">Testimonial</li>
+                            <li class="breadcrumb-item"><a href="{{ route('admin.testimonial.index') }}">Testimonial</a></li>
                             <li class="breadcrumb-item active">Create</li>
                         </ol>
                     </div>
@@ -38,7 +38,7 @@
                                    <div class="col-12">
                                     <div class="mb-3">
                                         
-                                        <label class="form-label" for="formrow-firstname-input">Name</label>
+                                        <label class="form-label required" for="formrow-firstname-input">Name</label>
                                         <input type="text" class="form-control" id="formrow-firstname-input" name="name" value="">
                                      @error('name')
                                         <span class="text text-danger">{{$message}}</span>
@@ -47,7 +47,7 @@
 
                                     <div class="mb-3">
                                         
-                                        <label class="form-label" for="formrow-firstname-input">Desination</label>
+                                        <label class="form-label required" for="formrow-firstname-input">Desination</label>
                                         <input type="text" class="form-control" id="formrow-firstname-input" name="desination" value="">
                                      @error('desination')
                                         <span class="text text-danger">{{$message}}</span>
@@ -55,7 +55,7 @@
                                     </div>
 
                                     <div class="mb-3">
-                                        <label class="form-label" for="formrow-firstname-input">Details</label>
+                                        <label class="form-label required" for="formrow-firstname-input">Details</label>
                                         
     
                                         <textarea id="summernote" name="details"></textarea>
@@ -66,7 +66,7 @@
                                     </div>
 
                                     <div class="form-group mb-3">
-                                        <label class="form-label">Status</label>
+                                        <label class="form-label required">Status</label>
                                         <select name="status" id="" class="form-control">
                                             <option value>---Select Status---</option>
                                             <option  value="Active">Active</option>

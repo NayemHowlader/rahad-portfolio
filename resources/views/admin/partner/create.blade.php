@@ -13,7 +13,7 @@
                     <div class="page-title-right">
                         <ol class="breadcrumb m-0">
                             <li class="breadcrumb-item"><a href="{{ route('admin.dashboard') }}">Dashboard</a></li>
-                            <li class="breadcrumb-item active">Partner</li>
+                            <li class="breadcrumb-item"><a href="{{ route('admin.partner.index') }}">Partner</a></li>
                             <li class="breadcrumb-item active">Create</li>
                         </ol>
                     </div>
@@ -37,15 +37,19 @@
                                <div class="row">
                                    <div class="col-12">
                                     <div class="form-group mb-3">
-                                        <label class="form-label">Partner Logo(87*87)</label>
+                                        <label class="form-label required">Partner Logo(87*87)</label>
                                         <input type="file" name="image" class="form-control"/>
+
+                                        @error('image')
+                                        <span class="text text-danger">{{$message}}</span>
+                                    @enderror
                                       
                                     </div>
 
                     
 
                                     <div class="form-group mb-3">
-                                        <label class="form-label">Status</label>
+                                        <label class="form-label required">Status</label>
                                         <select name="status" id="" class="form-control">
                                             <option value>---Select Status---</option>
                                             <option  value="Active">Active</option>

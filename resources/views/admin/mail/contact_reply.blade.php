@@ -8,7 +8,7 @@
 </head>
 <body>
 
-    <p>{{ $replay->message }}</p>
+    <p>{{ $replay->replay }}</p>
 
 </body>
 </html>

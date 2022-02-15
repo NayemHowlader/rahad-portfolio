@@ -39,7 +39,7 @@
 
                                 <div class="mb-3">
                         
-                                    <label class="form-label" for="formrow-firstname-input">Institute</label>
+                                    <label class="form-label required" for="formrow-firstname-input">Institute</label>
                                     <input type="text" class="form-control" id="formrow-firstname-input" name="institute" value="{{ $education->institute }}">
                                     @error('institute')
                                     <span class="text text-danger">{{$message}}</span>
@@ -48,7 +48,7 @@
 
                                 <div class="mb-3">
                         
-                                    <label class="form-label" for="formrow-firstname-input">Degree</label>
+                                    <label class="form-label required" for="formrow-firstname-input">Degree</label>
                                     <input type="text" class="form-control" id="formrow-firstname-input" name="degree" value="{{ $education->degree }}">
                                     @error('degree')
                                     <span class="text text-danger">{{$message}}</span>
@@ -57,7 +57,7 @@
 
                                 <div class="mb-3">
                         
-                                    <label class="form-label" for="formrow-firstname-input">Academic Year</label>
+                                    <label class="form-label required" for="formrow-firstname-input">Academic Year</label>
                                     <input type="text" class="form-control" id="formrow-firstname-input" name="year" value="{{ $education->year }}">
                                     @error('year')
                                     <span class="text text-danger">{{$message}}</span>
@@ -65,7 +65,7 @@
                                 </div>
 
                                 <div class="form-group mb-3">
-                                    <label class="form-label">Status</label>
+                                    <label class="form-label required">Status</label>
                                     <select name="status" id="" class="form-control">
                                         <option value>---Select Status---</option>
                                         <option @if ($education->status == 'Active') selected @endif value="Active">Active</option>

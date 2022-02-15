@@ -13,7 +13,8 @@
                     <div class="page-title-right">
                         <ol class="breadcrumb m-0">
                             <li class="breadcrumb-item"><a href="{{ route('admin.dashboard') }}">Dashboard</a></li>
-                            <li class="breadcrumb-item active">Portfolio</li>
+                            <li class="breadcrumb-item"><a href="{{ route('admin.portfolio.category.index') }}">PortfolioCategory</a></li>
+                            <li class="breadcrumb-item active">Create</li>
                         </ol>
                     </div>
                 </div>
@@ -37,7 +38,7 @@
                                    <div class="col-12">
                                     <div class="mb-3">
                                         
-                                        <label class="form-label" for="formrow-firstname-input">Category Name </label>
+                                        <label class="form-label required" for="formrow-firstname-input">Category Name </label>
                                         <input type="text" class="form-control" id="formrow-firstname-input" name="category" value="">
                                      @error('category')
                                         <span class="text text-danger">{{$message}}</span>
@@ -45,7 +46,7 @@
                                     </div>
 
                                     <div class="form-group mb-3">
-                                        <label class="form-label">Status</label>
+                                        <label class="form-label required">Status</label>
                                         <select name="status" id="" class="form-control">
                                             <option value>---Select Status---</option>
                                             <option  value="Active">Active</option>

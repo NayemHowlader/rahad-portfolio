@@ -38,7 +38,7 @@
 
                                                 <div class="col-md-6">
                                                     <div class="form-group mb-3">
-                                                        <label class="form-label">Name</label>
+                                                        <label class="form-label required">Name</label>
                                                         <input type="text" name="name" class="form-control" value="{{ old('name') }}" placeholder="Enter Name" required/>
                                                         @error('name')
                                                             <span class="text text-danger">{{$message}}</span>
@@ -48,7 +48,7 @@
 
                                                 <div class="col-md-6">
                                                     <div class="form-group mb-3">
-                                                        <label class="form-label">Email</label>
+                                                        <label class="form-label required">Email</label>
                                                         <span id="email_validation">
                                                             
                                                         </span>
@@ -62,7 +62,7 @@
 
                                                 <div class="col-md-6">
                                                     <div class="form-group mb-3">
-                                                        <label class="form-label">Password</label>
+                                                        <label class="form-label required">Password</label>
                                                         <input type="password" name="password" value="{{old('password')}}" class="form-control" placeholder="Enter Password" required/>
                                                         @error('password')
                                                             <span class="text text-danger">{{$message}}</span>
@@ -72,14 +72,14 @@
 
                                                 <div class="col-md-6">
                                                     <div class="form-group mb-3">
-                                                        <label class="form-label">Confirm Password</label>
+                                                        <label class="form-label required">Confirm Password</label>
                                                         <input type="password" name="password_confirmation" value="{{old('password_confirmation')}}" class="form-control" placeholder="Confirm Password" required/>
                                                     </div>
                                                 </div>
 
                                                 <div class="col-md-6">
                                                     <div class="form-group mb-3">
-                                                        <label class="form-label">User Role</label>
+                                                        <label class="form-label required">User Role</label>
                                                         <select name="role" id="" class="form-control">
                                                             <option value="">---Select Role---</option>
                                                             <option value="SuperAdmin">Super Admin</option>
@@ -91,7 +91,7 @@
 
                                                 <div class="col-md-6">
                                                     <div class="form-group mb-3">
-                                                        <label class="form-label">Status</label>
+                                                        <label class="form-label required">Status</label>
                                                         <select name="status" id="" class="form-control">
                                                             <option value>---Select Status---</option>
                                                             <option value="Active">Active</option>

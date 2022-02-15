@@ -39,7 +39,7 @@
 
                                 <div class="mb-3">
                         
-                                    <label class="form-label" for="formrow-firstname-input">Institute</label>
+                                    <label class="form-label required" for="formrow-firstname-input">Institute</label>
                                     <input type="text" class="form-control" id="formrow-firstname-input" name="institute" value="{{ $experience->institute }}">
                                     @error('institute')
                                     <span class="text text-danger">{{$message}}</span>
@@ -48,7 +48,7 @@
 
                                 <div class="mb-3">
                         
-                                    <label class="form-label" for="formrow-firstname-input">Position</label>
+                                    <label class="form-label required" for="formrow-firstname-input">Position</label>
                                     <input type="text" class="form-control" id="formrow-firstname-input" name="position" value="{{ $experience->position }}">
                                     @error('position')
                                     <span class="text text-danger">{{$message}}</span>
@@ -57,7 +57,7 @@
 
                                 <div class="mb-3">
                         
-                                    <label class="form-label" for="formrow-firstname-input">Job Duration</label>
+                                    <label class="form-label required" for="formrow-firstname-input">Job Duration</label>
                                     <input type="text" class="form-control" id="formrow-firstname-input" name="year" value="{{ $experience->year }}">
                                     @error('year')
                                     <span class="text text-danger">{{$message}}</span>
@@ -65,12 +65,15 @@
                                 </div>
 
                                 <div class="form-group mb-3">
-                                    <label class="form-label">Status</label>
+                                    <label class="form-label required">Status</label>
                                     <select name="status" id="" class="form-control">
                                         <option value>---Select Status---</option>
                                         <option @if ($experience->status == 'Active') selected @endif value="Active">Active</option>
                                         <option @if ($experience->status == 'Deactive') selected @endif value="Deactive">Deactive</option>
                                     </select>
+                                    @error('status')
+                                    <span class="text text-danger">{{$message}}</span>
+                                @enderror
                                     </div>
                                 <div class="form-group">
                                     <button type="submit" class="btn btn-primary">Update</button>

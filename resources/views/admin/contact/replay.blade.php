@@ -54,11 +54,13 @@
                                <div class="row">
                                 <div class="col-12">
                                  <div class="mb-3">
-                                     <label class="form-label" for="formrow-firstname-input">Message</label>
+                                     <label class="form-label required" for="formrow-firstname-input">Message</label>
                                      
                                      <textarea class="form-control" id="exampleFormControlTextarea1" name="replay" rows="3"></textarea>
                                      
-                                    
+                                     @error('replay')
+                                     <span class="text text-danger">{{$message}}</span>
+                                 @enderror
                                      
                                  </div>
                                 </div>

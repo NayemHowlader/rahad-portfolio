@@ -13,7 +13,7 @@
                     <div class="page-title-right">
                         <ol class="breadcrumb m-0">
                             <li class="breadcrumb-item"><a href="{{ route('admin.dashboard') }}">Dashboard</a></li>
-                            <li class="breadcrumb-item active">News</li>
+                            <li class="breadcrumb-item"><a href="{{ route('admin.news.index') }}">News</a></li>
                             <li class="breadcrumb-item active">Edit</li>
                         </ol>
                     </div>
@@ -37,7 +37,7 @@
                                <div class="row">
                                    <div class="col-12">
                                     <div class="mb-3">
-                                        <label for="">Select Category</label>
+                                        <label class="required" for="">Select Category</label>
                                         <select class="form-select" aria-label="Default select example" name="category_name">
                          
 
@@ -53,18 +53,25 @@
                                          
 
                                           </select>
+
+                                          @error('status')
+                                          <span class="text text-danger">{{$message}}</span>
+                                      @enderror
                                     </div>
 
                                     <div class="mb-3">
                                         
-                                        <label class="form-label" for="formrow-firstname-input">News Title </label>
+                                        <label class="form-label required" for="formrow-firstname-input">News Title </label>
                                         <input type="text" class="form-control" id="formrow-firstname-input" name="title" value="{{ $news->title }}">
+                                        @error('title')
+                                        <span class="text text-danger">{{$message}}</span>
+                                    @enderror
                                     </div>
 
                                    
 
                                     <div class="form-group mb-3">
-                                        <label class="form-label">News Image</label>
+                                        <label class="form-label required">News Image</label>
                                         <input type="file" name="image" class="form-control"/>
                                  <img src="{{asset('photo/news')}}/{{ $news->image }}" alt="" style="width:100px;margin-top:20px">
                                     @error('image')
@@ -76,18 +83,25 @@
 
                                     <div class="mb-3">
                                         
-                                        <label class="form-label" for="formrow-firstname-input">News Details</label>
+                                        <label class="form-label required" for="formrow-firstname-input">News Details</label>
                                      
 
                                         <textarea id="summernote" name="details">{{ $news->details }}</textarea>
+                                        @error('details')
+                                        <span class="text text-danger">{{$message}}</span>
+                                    @enderror
                                     </div>
 
                                     <div class="mb-3">
-                                        
+                                        <label class="form-label required">Status</label>
                                         <select class="form-select" aria-label="Default select example" name="status">
                                         <option @if ($news->status == 'Active') selected @endif value="Active">Active</option>
                                         <option @if ($news->status == 'Deactive') selected @endif value="Deactive">Deactive</option>
                                           </select>
+
+                                          @error('status')
+                                          <span class="text text-danger">{{$message}}</span>
+                                      @enderror
                                     </div>
 
                                    

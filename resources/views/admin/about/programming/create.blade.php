@@ -13,7 +13,7 @@
                     <div class="page-title-right">
                         <ol class="breadcrumb m-0">
                             <li class="breadcrumb-item"><a href="{{ route('admin.dashboard') }}">Dashboard</a></li>
-                            <li class="breadcrumb-item active">Programming</li>
+                            <li class="breadcrumb-item"><a href="{{ route('admin.about.programming.index') }}">Programming</a></li>
                             <li class="breadcrumb-item active">Create</li>
                         </ol>
                     </div>
@@ -38,7 +38,7 @@
                                    <div class="col-12">
                                     <div class="mb-3">
                                         
-                                        <label class="form-label" for="formrow-firstname-input">Title</label>
+                                        <label class="form-label required" for="formrow-firstname-input">Title</label>
                                         <input type="text" class="form-control" id="formrow-firstname-input" name="title" value="">
                                      @error('title')
                                         <span class="text text-danger">{{$message}}</span>
@@ -47,7 +47,7 @@
 
                                     <div class="mb-3">
                                         
-                                        <label class="form-label" for="formrow-firstname-input">Expert Level(%)</label>
+                                        <label class="form-label required" for="formrow-firstname-input">Expert Level(%)</label>
                                         <input type="text" class="form-control" id="formrow-firstname-input" name="level" value="">
                                      @error('level')
                                         <span class="text text-danger">{{$message}}</span>
@@ -55,7 +55,7 @@
                                     </div>
 
                                     <div class="form-group mb-3">
-                                        <label class="form-label">Status</label>
+                                        <label class="form-label required">Status</label>
                                         <select name="status" id="" class="form-control">
                                             <option value>---Select Status---</option>
                                             <option  value="Active">Active</option>

@@ -37,7 +37,7 @@
                                <div class="row">
                                    <div class="col-4">
                                     <div class="mb-3">
-                                        <label class="form-label" for="formrow-email-input">Name</label>
+                                        <label class="form-label required" for="formrow-email-input">Name</label>
                                         <input type="hidden" name="id" value="{{ $about->id }}">
                                         <input type="text" class="form-control" id="name"  name="name" value="{{$about->name}}">
                                         @error('name')
@@ -47,7 +47,7 @@
                                    </div>
                                    <div class="col-4">
                                     <div class="mb-3">
-                                        <label class="form-label" for="formrow-email-input">Address</label>
+                                        <label class="form-label required" for="formrow-email-input">Address</label>
                                         <input type="text" class="form-control" id="address" name="address" value="{{$about->address}}">
 
                                         @error('address')
@@ -57,7 +57,7 @@
                                    </div>
                                    <div class="col-4">
                                     <div class="mb-3">
-                                        <label class="form-label" for="formrow-email-input">Study</label>
+                                        <label class="form-label required" for="formrow-email-input">Study</label>
                                         <input type="text" class="form-control" id="study" name="study" value="{{$about->study}}">
                                         @error('study')
                                             <span class="text text-danger">{{$message}}</span>
@@ -69,7 +69,7 @@
                                <div class="row">
                                 <div class="col-4">
                                  <div class="mb-3">
-                                     <label class="form-label" for="formrow-email-input">Degree</label>
+                                     <label class="form-label required" for="formrow-email-input">Degree</label>
                                      <input type="text" class="form-control" id="degree" name="degree" value="{{$about->degree}}">
                                      @error('degree')
                                             <span class="text text-danger">{{$message}}</span>
@@ -78,7 +78,7 @@
                                 </div>
                                 <div class="col-4">
                                  <div class="mb-3">
-                                     <label class="form-label" for="formrow-email-input">Mail</label>
+                                     <label class="form-label required" for="formrow-email-input">Mail</label>
                                      <input type="email" class="form-control" id="mail" name="mail" value="{{$about->mail}}">
 
                                      @error('mail')
@@ -88,7 +88,7 @@
                                 </div>
                                 <div class="col-4">
                                  <div class="mb-3">
-                                     <label class="form-label" for="formrow-email-input">Phone</label>
+                                     <label class="form-label required" for="formrow-email-input">Phone</label>
                                      <input type="text" class="form-control" id="phone" name="phone" value="{{$about->phone}}">
 
                                      @error('phone')
@@ -106,7 +106,10 @@
                                      <label class="form-label" for="formrow-firstname-input">Details</label>
 
                                      <textarea id="summernote" name="description">{{ $about->description }}</textarea>
-                                                
+                                     
+                                     @error('description')
+                                     <span class="text text-danger">{{$message}}</span>
+                                     @enderror
                                  </div>
                                 </div>
                             </div>

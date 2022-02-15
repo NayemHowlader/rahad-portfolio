@@ -39,7 +39,7 @@
 
                                 <div class="mb-3">
                         
-                                    <label class="form-label" for="formrow-firstname-input">Name</label>
+                                    <label class="form-label required" for="formrow-firstname-input">Name</label>
                                     <input type="text" class="form-control" id="formrow-firstname-input" name="name" value="{{ $testimonial->name }}">
                                     @error('name')
                                     <span class="text text-danger">{{$message}}</span>
@@ -48,7 +48,7 @@
 
                                 <div class="mb-3">
                         
-                                    <label class="form-label" for="formrow-firstname-input">Desination</label>
+                                    <label class="form-label required" for="formrow-firstname-input">Desination</label>
                                     <input type="text" class="form-control" id="formrow-firstname-input" name="desination" value="{{ $testimonial->desination }}">
                                     @error('desination')
                                     <span class="text text-danger">{{$message}}</span>
@@ -56,7 +56,7 @@
                                 </div>
 
                                 <div class="mb-3">
-                                    <label class="form-label" for="formrow-firstname-input">Details</label>
+                                    <label class="form-label required" for="formrow-firstname-input">Details</label>
                                     
 
                                     <textarea id="summernote" name="details">{{ $testimonial->details }}</textarea>
@@ -67,12 +67,15 @@
                                 </div>
 
                                 <div class="form-group mb-3">
-                                    <label class="form-label">Status</label>
+                                    <label class="form-label required">Status</label>
                                     <select name="status" id="" class="form-control">
                                         <option value>---Select Status---</option>
                                         <option @if ($testimonial->status == 'Active') selected @endif value="Active">Active</option>
                                         <option @if ($testimonial->status == 'Deactive') selected @endif value="Deactive">Deactive</option>
                                     </select>
+                                    @error('status')
+                                    <span class="text text-danger">{{$message}}</span>
+                                @enderror
                                     </div>
                                 <div class="form-group">
                                     <button type="submit" class="btn btn-primary">Update</button>

@@ -9,11 +9,11 @@
     <div class="page-title-right">
         <ol class="breadcrumb m-0">
             <li class="breadcrumb-item"><a href="javascript: void(0);">Dashboard</a></li>
-            <li class="breadcrumb-item"><a href="{{ route('admin.portfolio.category.index') }}">Service</a></li>
+            <li class="breadcrumb-item"><a href="{{ route('admin.service.index') }}">Service</a></li>
             <li class="breadcrumb-item active">Edit</li>
         </ol>
     </div>
-    <a href="{{ route('admin.service.index') }}" class="mb-sm-0 font-size-18 btn btn-primary"> All Service</a>
+    <a href="{{ route('admin.service.index') }}" class="mb-sm-0 btn btn-primary"> All Service</a>
 </div>
 </div>
 </div>
@@ -39,19 +39,22 @@
 
                                 <div class="mb-3">
                         
-                                    <label class="form-label" for="formrow-firstname-input">Title</label>
+                                    <label class="form-label required" for="formrow-firstname-input">Title</label>
                                     <input type="text" class="form-control" id="formrow-firstname-input" name="title" value="{{ $service->title }}">
                                     @error('title')
                                     <span class="text text-danger">{{$message}}</span>
                                 @enderror
                                 </div>
                                 <div class="form-group mb-3">
-                                    <label class="form-label">Status</label>
+                                    <label class="form-label required">Status</label>
                                     <select name="status" id="" class="form-control">
                                         <option value>---Select Status---</option>
                                         <option @if ($service->status == 'Active') selected @endif value="Active">Active</option>
                                         <option @if ($service->status == 'Deactive') selected @endif value="Deactive">Deactive</option>
                                     </select>
+                                    @error('status')
+                                    <span class="text text-danger">{{$message}}</span>
+                                @enderror
                                     </div>
                                 <div class="form-group">
                                     <button type="submit" class="btn btn-primary">Update</button>

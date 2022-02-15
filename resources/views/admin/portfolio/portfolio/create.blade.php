@@ -13,7 +13,8 @@
                     <div class="page-title-right">
                         <ol class="breadcrumb m-0">
                             <li class="breadcrumb-item"><a href="{{ route('admin.dashboard') }}">Dashboard</a></li>
-                            <li class="breadcrumb-item active">Portfolio</li>
+                            <li class="breadcrumb-item"><a href="{{ route('admin.portfolio.index') }}">Portfolio</a></li>
+                            <li class="breadcrumb-item active">Create</li>
                         </ol>
                     </div>
                 </div>
@@ -36,7 +37,7 @@
                                <div class="row">
                                    <div class="col-12">
                                     <div class="mb-3">
-                                        <label for="">Select Category</label>
+                                        <label class="required" for="category">Select Category</label>
                                         <select class="form-select" aria-label="Default select example" name="category_name">
                                             <option >select category</option>
                                             @foreach ($categories as $category )
@@ -54,7 +55,7 @@
 
                                     <div class="mb-3">
                                         
-                                        <label class="form-label" for="formrow-firstname-input">Portfolio Title </label>
+                                        <label class="form-label required" for="formrow-firstname-input">Portfolio Title </label>
                                         <input type="text" class="form-control" id="formrow-firstname-input" name="title" value="">
                                         @error('title')
                                               <span class="text text-danger">{{$message}}</span>
@@ -66,7 +67,7 @@
                                     <div class="mb-3">
                                         
                                         <div class="form-group">
-                                            <label >Portfolio Image(600*600)</label>
+                                            <label class="required">Portfolio Image(600*600)</label>
                                             <input type="file" class="form-control" name="image" >
                                             @error('image')
                                               <span class="text text-danger">{{$message}}</span>
@@ -78,15 +79,18 @@
 
                                     <div class="mb-3">
                                         
-                                        <label class="form-label" for="formrow-firstname-input">Portfolio Details</label>
+                                        <label class="form-label required" for="formrow-firstname-input">Portfolio Details</label>
 
                                         <textarea id="summernote" name="details"></textarea>
+                                        @error('details')
+                                        <span class="text text-danger">{{$message}}</span>
+                                       @enderror
                                     </div>
 
                                     <div class="mb-3">
-                                        
+                                        <label class="form-label required" for="formrow-firstname-input">Select Status</label>
                                         <select class="form-select" aria-label="Default select example" name="status">
-                                            <option selected>Status</option>
+                                            <option selected>Select Status</option>
                                             <option value="Active">Active</option>
                                             <option value="Deactive">Deactive</option>
                                           </select>

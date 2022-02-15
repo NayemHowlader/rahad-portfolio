@@ -37,7 +37,7 @@
                                <div class="row">
                                    <div class="col-12">
                                     <div class="mb-3">
-                                        <label class="form-label" for="formrow-firstname-input">Title</label>
+                                        <label class="form-label required" for="formrow-firstname-input">Title</label>
                                         <input type="text" class="form-control" id="formrow-firstname-input" name="title" value="{{$main->title}}">
                                         @error('title')
                                          <span class="text text-danger">{{$message}}</span>
@@ -48,7 +48,7 @@
                                <div class="row">
                                    <div class="col-4">
                                     <div class="mb-3">
-                                        <label class="form-label" for="formrow-email-input">Sub title 1</label>
+                                        <label class="form-label required" for="formrow-email-input">Sub title 1</label>
                                         <input type="text"  class="form-control" id="formrow-email-input" name="sub_title1" value="{{$main->sub_title1}}">
                                         @error('sub_title1')
                                         <span class="text text-danger">{{$message}}</span>
@@ -57,7 +57,7 @@
                                    </div>
                                    <div class="col-4">
                                     <div class="mb-3">
-                                        <label class="form-label" for="formrow-email-input">Sub title 1</label>
+                                        <label class="form-label required" for="formrow-email-input">Sub title 1</label>
                                         <input type="text" class="form-control" id="formrow-email-input" name="sub_title2" value="{{$main->sub_title2}}">
                                         @error('sub_title2')
                                         <span class="text text-danger">{{$message}}</span>

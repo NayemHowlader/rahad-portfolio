@@ -5934,4 +5934,11 @@ body[data-layout-mode="dark"] .pricing-table-bg {
     line-height: 0.8;
     position: relative;
 }
+
+
+
+.required:after {
+content:" *";
+color: red;
+}
 /*# sourceMappingURL=app.min.css.map */

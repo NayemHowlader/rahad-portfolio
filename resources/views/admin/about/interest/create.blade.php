@@ -38,7 +38,7 @@
                                    <div class="col-12">
                                     <div class="mb-3">
                                         
-                                        <label class="form-label" for="formrow-firstname-input">Title</label>
+                                        <label class="form-label required" for="formrow-firstname-input">Title</label>
                                         <input type="text" class="form-control" id="formrow-firstname-input" name="title" value="">
                                      @error('title')
                                         <span class="text text-danger">{{$message}}</span>
@@ -46,7 +46,7 @@
                                     </div>
 
                                     <div class="form-group mb-3">
-                                        <label class="form-label">Status</label>
+                                        <label class="form-label required">Status</label>
                                         <select name="status" id="" class="form-control">
                                             <option value>---Select Status---</option>
                                             <option  value="Active">Active</option>

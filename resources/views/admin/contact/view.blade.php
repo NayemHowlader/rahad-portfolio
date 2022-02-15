@@ -13,7 +13,7 @@
                     <div class="page-title-right">
                         <ol class="breadcrumb m-0">
                             <li class="breadcrumb-item"><a href="{{ route('admin.dashboard') }}">Dashboard</a></li>
-                            <li class="breadcrumb-item active">Contact</li>
+                            <li class="breadcrumb-item"><a href="{{ route('admin.contact.index') }}">Contact</a></li>
                             <li class="breadcrumb-item active">View</li>
                         </ol>
                     </div>
